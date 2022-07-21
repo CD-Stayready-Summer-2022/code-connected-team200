@@ -1,5 +1,6 @@
 package com.team200.codeconnectedserver.blogpost.model;
 
+import com.team200.codeconnectedserver.profile.model.Profile;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
@@ -17,10 +18,11 @@ public class BlogPost {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String body;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "BlogPost")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "blogPost")
     private List<Comments>commentsList;
     @ManyToOne(cascade = CascadeType.ALL)
     private Profile profile;
+    private Integer likes;
 
 
 
