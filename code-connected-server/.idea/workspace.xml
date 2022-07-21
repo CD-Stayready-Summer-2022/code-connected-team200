@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
 
-    <list default="true" id="c044b8a1-e08c-4486-ab98-30b5c65c6bc2" name="Changes" comment=""/>
-    <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-    <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+
+
 
     <list default="true" id="880f3767-480a-4563-9ade-12ba335bbc1a" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/src/main/resources/sql/chat.sql" afterDir="false" />
@@ -62,6 +61,7 @@
 
   </component>
   <component name="RunManager"/>
+
   <configuration name="CodeConnectedServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
     <option name="MAIN_CLASS_NAME" value="com.team200.codeconnectedserver.CodeConnectedServerApplication" />
     <module name="code-connected-server" />
@@ -80,6 +80,26 @@
       <item itemvalue="Application.CodeConnectedServerApplication" />
     </list>
   </recent_temporary>
+
+    <configuration name="CodeConnectedServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.team200.codeconnectedserver.CodeConnectedServerApplication" />
+      <module name="code-connected-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.team200.codeconnectedserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CodeConnectedServerApplication" />
+      </list>
+    </recent_temporary>
+
 
   <component name="ProjectId" id="2CG5HUt78eIQ8WAYhhKTIhigW9w" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
