@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.List;
 
 @Entity
 @Data
@@ -24,5 +25,12 @@ public class Profile {
     List<Education> school;
     @NonNull
     List<Job> experience;
+    @NonNull
+    private String personalDescription;
+    @NonNull
+    private List<Profile> connections;
+    @NonNull
+    List<BlogPost> posts;
+
 
 }
