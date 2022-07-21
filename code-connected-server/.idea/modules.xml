@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/code-connected-server.iml" filepath="$PROJECT_DIR$/code-connected-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../code-connected-server.iml" filepath="$PROJECT_DIR$/../code-connected-server.iml" />
     </modules>
   </component>
 </project>
