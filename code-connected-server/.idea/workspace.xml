@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="c044b8a1-e08c-4486-ab98-30b5c65c6bc2" name="Changes" comment="">
+
+    <list default="true" id="c044b8a1-e08c-4486-ab98-30b5c65c6bc2" name="Changes" comment=""/>
       <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-=======
+
     <list default="true" id="880f3767-480a-4563-9ade-12ba335bbc1a" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/src/main/resources/sql/chat.sql" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/sql/main.sql" afterDir="false" />
@@ -16,7 +16,7 @@
       <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
->>>>>>> 9682a6f9510902b112147570c96baa5f84f90e9a
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-<<<<<<< HEAD
-=======
+
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
       <map>
@@ -42,7 +41,7 @@
       </map>
     </option>
   </component>
->>>>>>> 9682a6f9510902b112147570c96baa5f84f90e9a
+
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -53,24 +52,16 @@
       </MavenGeneralSettings>
     </option>
   </component>
-<<<<<<< HEAD
+
   <component name="ProjectId" id="2CG47bsVuhuG34FaZ4TMek9Issj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/kenne/dev/code-connected-team200/code-connected-server",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "advanced.settings"
-  }
-}]]></component>
-  <component name="RunManager">
+  <component name="PropertiesComponent">
+
+  </component>
+  <component name="RunManager"/>
     <configuration name="CodeConnectedServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.team200.codeconnectedserver.CodeConnectedServerApplication" />
       <module name="code-connected-server" />
@@ -89,7 +80,7 @@
         <item itemvalue="Application.CodeConnectedServerApplication" />
       </list>
     </recent_temporary>
-=======
+
   <component name="ProjectId" id="2CG5HUt78eIQ8WAYhhKTIhigW9w" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -102,24 +93,22 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
->>>>>>> 9682a6f9510902b112147570c96baa5f84f90e9a
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-<<<<<<< HEAD
+
       <changelist id="c044b8a1-e08c-4486-ab98-30b5c65c6bc2" name="Changes" comment="" />
       <created>1658415426813</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658415426813</updated>
-=======
+
       <changelist id="880f3767-480a-4563-9ade-12ba335bbc1a" name="Changes" comment="" />
       <created>1658415993266</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658415993266</updated>
->>>>>>> 9682a6f9510902b112147570c96baa5f84f90e9a
     </task>
     <servers />
   </component>
