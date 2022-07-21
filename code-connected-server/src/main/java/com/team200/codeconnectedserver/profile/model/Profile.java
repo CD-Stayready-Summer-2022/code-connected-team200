@@ -1,11 +1,9 @@
 package com.team200.codeconnectedserver.profile.model;
 
+import com.team200.codeconnectedserver.blogpost.model.BlogPost;
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -21,14 +19,17 @@ public class Profile {
     private String firstName;
     @NonNull
     private String lastName;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "school")
     @NonNull
     List<Education> school;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "experience")
     @NonNull
     List<Job> experience;
     @NonNull
     private String personalDescription;
     @NonNull
     private List<Profile> connections;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "school")
     @NonNull
     List<BlogPost> posts;
 
