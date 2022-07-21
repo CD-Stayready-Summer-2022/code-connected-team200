@@ -1,1 +1,8 @@
-
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3308/code_connected
+    username: root
+    password: clean-code
+  jpa:
+    show-sql: false
