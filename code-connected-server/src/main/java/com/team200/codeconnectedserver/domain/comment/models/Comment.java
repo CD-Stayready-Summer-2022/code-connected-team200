@@ -1,5 +1,7 @@
 package com.team200.codeconnectedserver.domain.comment.models;
 
+import com.team200.codeconnectedserver.blogpost.model.BlogPost;
+import com.team200.codeconnectedserver.profile.model.Profile;
 import lombok.*;
 
 import javax.persistence.*;
