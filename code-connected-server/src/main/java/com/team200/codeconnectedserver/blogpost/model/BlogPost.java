@@ -19,7 +19,7 @@ public class BlogPost {
     private String body;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "BlogPost")
     private List<Comments>commentsList;
-    @ManyToOne()
+    @ManyToOne(cascade = CascadeType.ALL)
     private Profile profile;
 
 
