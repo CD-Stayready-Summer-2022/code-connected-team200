@@ -19,7 +19,7 @@ public class Group {
     private String groupName;
 
     @NonNull
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "group")
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "blogPosts")
     private List<BlogPost>blogPosts;
 
     @NonNull
