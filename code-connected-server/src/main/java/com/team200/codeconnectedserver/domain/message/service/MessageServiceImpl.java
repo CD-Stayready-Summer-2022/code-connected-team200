@@ -31,11 +31,8 @@ public class MessageServiceImpl implements MessageService{
     }
 
     @Override
-    public Message getBySenderId(Long id) {
-        Optional<Message> optional = messageRepo.findBySenderId(id);
-        if(optional.isPresent())
-            throw new ResourceNotFoundException("Message Does Not Exist");
-        return optional.get();
+    public Iterable<Message> getBySenderId(Long id) {
+        return messageRepo.findBySenderId(id);
     }
 
     @Override
