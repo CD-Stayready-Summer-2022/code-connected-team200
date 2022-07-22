@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class BlogPostServiceImpl implements BlogPostService {
-    private BlogPostRepo blogPostRepo;
+    private final BlogPostRepo blogPostRepo;
 
     public BlogPostServiceImpl(BlogPostRepo blogPostRepo) {
         this.blogPostRepo = blogPostRepo;
@@ -17,21 +17,23 @@ public class BlogPostServiceImpl implements BlogPostService {
 
     @Override
     public BlogPost create(BlogPost blogPost) {
-        return null;
+        return blogPostRepo.save(blogPost);
     }
 
     @Override
     public Optional<BlogPost> getById(Long id) {
-        return Optional.empty();
+        return blogPostRepo.findById(id);
+    }
+    @Override
+    public Optional<BlogPost> getByProfile(Long id) {
+        return blogPostRepo.findByProfile(id);
     }
 
     @Override
-    public List<BlogPost> getByProfile(Profile profile) {
-        return null;
+    public List<BlogPost> getByGroupName(String groupName) {
+        return (List<BlogPost>) blogPostRepo.findByGroupName(groupName);
     }
 
-    @Override
-    public List<BlogPost> getByGroup(Group group) {
-        return null;
-    }
+
+
 }
