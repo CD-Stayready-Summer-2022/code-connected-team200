@@ -27,6 +27,9 @@ public class Comment {
     private String body;
 
     @NonNull
+    private Integer likes;
+
+    @NonNull
     @ManyToOne()
     private BlogPost blogPost;
 
