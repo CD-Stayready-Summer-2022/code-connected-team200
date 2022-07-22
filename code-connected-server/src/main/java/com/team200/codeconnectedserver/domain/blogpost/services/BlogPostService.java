@@ -10,8 +10,8 @@ import java.util.Optional;
 public interface BlogPostService {
      BlogPost create (BlogPost blogPost);
      Optional<BlogPost> getById(Long id);
-     List<BlogPost> getByProfile(Profile profile);
-     List<BlogPost> getByGroup(Group group);
+     Optional<BlogPost> getByProfile(Long id);
+     List<BlogPost> getByGroupName(String groupName);
 
 
 }

@@ -7,7 +7,9 @@ import java.util.Optional;
 
 public interface BlogPostRepo extends JpaRepository<BlogPost,Long> {
     Optional<BlogPost>findByProfile(Long id);
-    Iterable<BlogPost>findByGroup();
+    Iterable<BlogPost>findByGroupName(String groupName);
+
+
 
 
 }
