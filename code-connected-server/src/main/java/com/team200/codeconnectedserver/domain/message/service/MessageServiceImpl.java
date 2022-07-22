@@ -1,5 +1,6 @@
 package com.team200.codeconnectedserver.domain.message.service;
 
+import com.team200.codeconnectedserver.domain.chat.model.Chat;
 import com.team200.codeconnectedserver.domain.core.Exceptions.ResourceNotFoundException;
 import com.team200.codeconnectedserver.domain.message.model.Message;
 import com.team200.codeconnectedserver.domain.message.repo.MessageRepo;
@@ -12,13 +13,15 @@ import java.util.Optional;
 public class MessageServiceImpl implements MessageService{
     private MessageRepo messageRepo;
 
+
     @Autowired
     public MessageServiceImpl(MessageRepo messageRepo) {
         this.messageRepo = messageRepo;
     }
 
     @Override
-    public Message create(Message message) {
+    public Message create(Message message, Chat chat) {
+        message.setChat(chat);
         return messageRepo.save(message);
     }
 
@@ -31,7 +34,12 @@ public class MessageServiceImpl implements MessageService{
     }
 
     @Override
-    public Iterable<Message> getBySenderId(Long id) {
+    public Iterable<Message> getAllFromChat(Chat chat) {
+        return messageRepo.findByChat(chat);
+    }
+
+    @Override
+    public Iterable<Message> getAllBySenderId(Long id) {
         return messageRepo.findBySenderId(id);
     }
 

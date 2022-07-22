@@ -1,33 +1,22 @@
 package com.team200.codeconnectedserver.domain.chat.model;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
+import com.team200.codeconnectedserver.domain.message.model.Message;
+import com.team200.codeconnectedserver.domain.profile.model.Profile;
+import lombok.*;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.util.List;
 
-@Entity
+@Entity(name = "chats")
 @Data
 @NoArgsConstructor
-@RequiredArgsConstructor
-@Table(name="chats")
+@ToString
 public class Chat {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
+    //chagne to profile object when it becomes available
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Message> messages;
 
-    @ManyToOne(cascade =  CascadeType.ALL)
-    private Profile profile1;
-
-    @ManyToOne(cascade =  CascadeType.ALL)
-    private Profile profile2;
-
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date date;
-
-    @PrePersist
-    protected void onCreate(){
-        date = new Date();
-    }
 }
