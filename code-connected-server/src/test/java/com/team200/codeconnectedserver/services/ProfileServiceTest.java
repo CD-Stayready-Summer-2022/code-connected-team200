@@ -2,8 +2,7 @@ package com.team200.codeconnectedserver.services;
 
 import com.team200.codeconnectedserver.profile.model.Profile;
 import com.team200.codeconnectedserver.profile.repo.ProfileRepo;
-import com.team200.codeconnectedserver.profile.service.ProfileService;
-import org.junit.jupiter.api.BeforeEach;
+import com.team200.codeconnectedserver.domain.profile.service.ProfileService;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
