@@ -1,9 +1,17 @@
 package com.team200.codeconnectedserver.domain.blogpost.model;
 
 import com.team200.codeconnectedserver.domain.comment.models.Comment;
+
 import com.team200.codeconnectedserver.domain.group.model.Group;
 import com.team200.codeconnectedserver.domain.profile.model.Profile;
 import lombok.*;
+
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import lombok.ToString;
+
 
 import javax.persistence.*;
 import java.util.List;
@@ -17,6 +25,7 @@ public class BlogPost {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @NonNull
     private String body;
 
@@ -33,6 +42,8 @@ public class BlogPost {
     private Profile profile;
 
     private Integer likes = 0;
+
+
 
 
 

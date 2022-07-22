@@ -2,6 +2,9 @@ package com.team200.codeconnectedserver.domain.profile.model;
 
 import com.team200.codeconnectedserver.domain.blogpost.model.BlogPost;
 import com.team200.codeconnectedserver.domain.job.model.Job;
+
+import com.team200.codeconnectedserver.domain.education.model.Education;
+
 import lombok.*;
 
 import javax.persistence.*;
