@@ -1,4 +1,4 @@
-package com.team200.codeconnectedserver.education.repo;
+package com.team200.codeconnectedserver.domain.education.repo;
 
 public class EducationRepo {
 }
