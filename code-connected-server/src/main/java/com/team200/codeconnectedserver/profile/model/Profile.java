@@ -19,6 +19,10 @@ public class Profile {
     private String firstName;
     @NonNull
     private String lastName;
+    @NonNull
+    private String email;
+    @NonNull
+    private String password;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "school")
     @NonNull
     List<Education> school;
@@ -28,7 +32,9 @@ public class Profile {
     @NonNull
     private String personalDescription;
     @NonNull
-    private List<Profile> connections;
+    private List<Profile> followers;
+    @NonNull
+    private List<Profile> following;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "school")
     @NonNull
     List<BlogPost> posts;
