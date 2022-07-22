@@ -9,9 +9,10 @@ import java.util.Optional;
 
 public interface BlogPostService {
      BlogPost create (BlogPost blogPost);
-     Optional<BlogPost> getById(Long id);
-     Optional<BlogPost> getByProfile(Long id);
+     BlogPost getById(Long id);
+     List<BlogPost> getByProfile(Long id);
      List<BlogPost> getByGroupName(String groupName);
+     void  likePost(Long id);
 
 
 }
