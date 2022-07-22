@@ -26,12 +26,18 @@ public class Comment {
     @NonNull
     private String body;
 
-    @NonNull
     private Integer likes;
 
     @NonNull
     @ManyToOne()
     private BlogPost blogPost;
+
+    public Comment(Profile sender,  String body,  BlogPost blogPost) {
+        this.sender = sender;
+        this.body = body;
+        this.likes = 0;
+        this.blogPost = blogPost;
+    }
 
     @Override
     public boolean equals(Object o) {

@@ -40,11 +40,17 @@ public class CommentServiceTest {
     }
 
     @Test
-    @DisplayName("Create Test success")
+    @DisplayName("Create Test- Success")
     public void createTest() {
         BDDMockito.doReturn(inputComment).when(commentRepo).save(ArgumentMatchers.any());
         Comment createdComment = commentService.create(testComment);
         Assertions.assertEquals(createdComment,inputComment);
+    }
+
+    @Test
+    @DisplayName("Create Test - Fail")
+    public void createTest02() {
+
     }
 
 

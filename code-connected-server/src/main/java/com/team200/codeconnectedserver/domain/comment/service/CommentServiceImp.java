@@ -4,13 +4,11 @@ import com.team200.codeconnectedserver.domain.blogpost.model.BlogPost;
 import com.team200.codeconnectedserver.domain.blogpost.services.BlogPostService;
 import com.team200.codeconnectedserver.domain.comment.models.Comment;
 import com.team200.codeconnectedserver.domain.comment.repo.CommentRepo;
-import com.team200.codeconnectedserver.domain.comment.service.CommentService;
 import com.team200.codeconnectedserver.domain.exceptions.ResourceCreationException;
 import com.team200.codeconnectedserver.domain.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
