@@ -15,15 +15,15 @@ public class Message {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NonNull
     @Temporal(TemporalType.TIMESTAMP)
     private Date date;
+    @NonNull
     private Long senderId;
     @NonNull
     private String content;
     @ManyToOne
     Chat chat;
-
-
     @PrePersist
     protected void onCreate() {
         date = new Date();
