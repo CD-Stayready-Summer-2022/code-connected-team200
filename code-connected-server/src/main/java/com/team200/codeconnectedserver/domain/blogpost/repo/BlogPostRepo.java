@@ -9,7 +9,4 @@ public interface BlogPostRepo extends JpaRepository<BlogPost,Long> {
     Optional<BlogPost>findByProfile(Long id);
     Iterable<BlogPost>findByGroupName(String groupName);
 
-
-
-
 }
