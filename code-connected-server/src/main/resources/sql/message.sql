@@ -5,4 +5,5 @@ CREATE TABLE if NOT EXISTS `messages` (
     `sender_id` INT,
     `content` VARCHAR(250),
     `chat_id` INT
+
     );
