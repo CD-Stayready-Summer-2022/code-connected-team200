@@ -9,9 +9,13 @@
         <module name="code-connected-server" />
       </profile>
     </annotationProcessing>
+<<<<<<< HEAD
     <bytecodeTargetLevel>
       <module name="code-connected-server" target="11" />
     </bytecodeTargetLevel>
+=======
+
+>>>>>>> 1f5d8220f41fe85fd3db81e8b938b018061564de
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
