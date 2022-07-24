@@ -44,9 +44,15 @@ public class BlogPost {
     private Integer likes = 0;
 
 
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "group_id")
+    private Group group;
 
+    public Group getGroup() {
+        return group;
+    }
 
-
-
-
+    public void setGroup(Group group) {
+        this.group = group;
+    }
 }

@@ -1,5 +1,6 @@
 package com.team200.codeconnectedserver.security.models;
 
+
 import com.google.firebase.auth.FirebaseToken;
 import com.team200.codeconnectedserver.security.enums.CredentialType;
 

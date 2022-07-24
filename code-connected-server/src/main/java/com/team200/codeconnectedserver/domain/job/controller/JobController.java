@@ -19,12 +19,14 @@ public class JobController {
     public JobController(JobService jobService){
         this.jobService = jobService;
     }
-    
+    /*
     @GetMapping
     public ResponseEntity<List<Job>> getAll(){
         List<Job> job = jobService.getAll();
         return new ResponseEntity<>(job, HttpStatus.OK);
     }
+
+     */
 
     @PostMapping
     public ResponseEntity<Job> create(@RequestBody Job job){

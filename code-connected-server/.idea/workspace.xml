@@ -4,7 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b470c40-8fcf-47d9-897c-02870efac482" name="Changes" comment="" />
+    <list default="true" id="6b470c40-8fcf-47d9-897c-02870efac482" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/blogpost/controller/BlogPostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/blogpost/controller/BlogPostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/blogpost/model/BlogPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/blogpost/model/BlogPost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/blogpost/services/BlogPostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/blogpost/services/BlogPostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/blogpost/services/BlogPostService.java~1406ec0f650ad8fb3290b2ca3116b3a60790dc9f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/blogpost/services/BlogPostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/blogpost/services/BlogPostServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/blogpost/services/BlogPostServiceImpl.java~1406ec0f650ad8fb3290b2ca3116b3a60790dc9f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/chat/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/chat/controller/ChatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/chat/repo/ChatRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/chat/repo/ChatRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/chat/services/ChatServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/chat/services/ChatServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/comment/models/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/comment/models/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/group/model/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/group/model/Group.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/group/repo/GroupRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/group/repo/GroupRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/group/services/GroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/group/services/GroupService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/group/services/GroupServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/group/services/GroupServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/job/controller/JobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/job/controller/JobController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/job/model/JobType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/config/FirebaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/config/FirebaseConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/models/Credentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/models/Credentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sql/comment.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sql/comment.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +56,22 @@
     <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/job/controller/JobController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/message/model/Message.java" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -51,7 +91,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kenne/dev/Namazon/Namazon/pom.xml&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kenne/dev/code-connected-team200/code-connected-server&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
@@ -80,7 +120,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c044b8a1-e08c-4486-ab98-30b5c65c6bc2" name="Changes" comment="" />
+      <changelist id="6b470c40-8fcf-47d9-897c-02870efac482" name="Changes" comment="" />
       <created>1658432137028</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />

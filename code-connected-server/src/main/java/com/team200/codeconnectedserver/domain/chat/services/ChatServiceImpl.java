@@ -3,6 +3,7 @@ package com.team200.codeconnectedserver.domain.chat.services;
 import com.team200.codeconnectedserver.domain.chat.exceptions.ChatNotFoundException;
 import com.team200.codeconnectedserver.domain.chat.model.Chat;
 import com.team200.codeconnectedserver.domain.chat.repo.ChatRepo;
+import com.team200.codeconnectedserver.domain.profile.model.Profile;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,8 +24,8 @@ public class ChatServiceImpl implements ChatService{
     @Override
     public Chat create(Profile person1, Profile person2) {
         Chat chat = new Chat();
-        chat.setProfile1(person1);
-        chat.setProfile1(person2);
+      //  chat.setProfile1(person1);
+        //chat.setProfile1(person2);
         chatRepo.save(chat);
         return chat;
     }
@@ -46,7 +47,7 @@ public class ChatServiceImpl implements ChatService{
                 }
             }
         }else{
-            throw new ChatNotFoundException("No shared chat between profile id = " = person1.getId() + " and profile id = " + person2.getId());
+            throw new ChatNotFoundException("No shared chat between profile id = " + person1.getId() + " and profile id = " + person2.getId());
         }
         return null;
     }
@@ -59,7 +60,6 @@ public class ChatServiceImpl implements ChatService{
         }else{
             throw new ChatNotFoundException("Not chats found for Profile id: " + person.getId());
         }
-        return possibleChats;
     }
 
     @Override

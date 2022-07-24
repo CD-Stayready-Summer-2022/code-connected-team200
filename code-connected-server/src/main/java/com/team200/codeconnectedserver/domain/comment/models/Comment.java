@@ -21,6 +21,8 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @ManyToOne
+    @JoinColumn(name = "sender_id")
     @NonNull
     private Profile sender;
     @NonNull

@@ -27,7 +27,7 @@ public class BlogPostController {
     }
     @GetMapping("{id}")
     public ResponseEntity<Optional<BlogPost>> getById(@PathVariable("id")Long id){
-        Optional<BlogPost> blogPost = blogPostService.getById(id);
+        Optional<BlogPost> blogPost = Optional.ofNullable(blogPostService.getById(id));
         return new ResponseEntity<>(blogPost,HttpStatus.OK);
     }
 
