@@ -1,11 +1,9 @@
-package com.team200.codeconnectedserver.security.utils.services;
+package com.team200.codeconnectedserver.security.utils;
 
+import com.google.auth.Credentials;
 import com.google.firebase.remoteconfig.User;
-import com.team200.codeconnectedserver.security.models.Credentials;
 import com.team200.codeconnectedserver.security.models.SecurityProperties;
-import com.team200.codeconnectedserver.security.utils.CookieUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
@@ -15,7 +13,6 @@ import javax.servlet.http.HttpServletRequest;
 
 @Service
 public class SecurityService {
-
     private HttpServletRequest httpServletRequest;
     private CookieUtils cookieUtils;
     private SecurityProperties securityProps;
