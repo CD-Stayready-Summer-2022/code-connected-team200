@@ -1,10 +1,10 @@
 package com.team200.codeconnectedserver.security.config;
 
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.team200.codeconnectedserver.security.filters.SecurityFilter;
 import com.team200.codeconnectedserver.security.models.SecurityProperties;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -14,8 +14,8 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.AuthenticationEntryPoint;
+import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
@@ -27,9 +27,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Configuration
-@EnableWebSecurity
-@EnableGlobalMethodSecurity(securedEnabled = true, jsr250Enabled = true, prePostEnabled = true)
-public class SecurityConfig {
+public class SecurityConfig{
 
     private ObjectMapper objectMapper;
     private SecurityProperties restSecProps;
@@ -41,6 +39,8 @@ public class SecurityConfig {
         this.restSecProps = restSecProps;
         this.tokenAuthenticationFilter = tokenAuthenticationFilter;
     }
+
+
 
     @Bean
     public AuthenticationEntryPoint restAuthenticationEntryPoint() {
@@ -71,7 +71,7 @@ public class SecurityConfig {
     }
 
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+    public SecurityFilterChain configure(HttpSecurity http) throws Exception {
         http.cors().configurationSource(corsConfigurationSource()).and().csrf().disable().formLogin().disable()
                 .httpBasic().disable().exceptionHandling().authenticationEntryPoint(restAuthenticationEntryPoint())
                 .and().authorizeRequests()
@@ -79,12 +79,11 @@ public class SecurityConfig {
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll().anyRequest().authenticated().and()
                 .addFilterBefore(tokenAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-
         return http.build();
     }
 
     @Bean
-    public WebSecurityCustomizer webSecurityCustomizer(){
-        return (web)-> web.ignoring().antMatchers("/images/**", "/js/**", "/webjars/**");
+    public WebSecurityCustomizer webSecurityCustomizer() {
+        return (web) -> web.ignoring().antMatchers("/images/**", "/js/**", "/webjars/**");
     }
 }
