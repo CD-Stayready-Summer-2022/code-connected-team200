@@ -48,3 +48,4 @@ public class Credentials {
         this.session = session;
     }
 }
+

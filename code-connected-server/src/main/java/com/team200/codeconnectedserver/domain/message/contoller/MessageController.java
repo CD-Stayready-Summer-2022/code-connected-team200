@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin("*")
-@RequestMapping("/api/v2/chat-messages")
+@RequestMapping("/api/v2/messages")
 public class MessageController {
     @Autowired
     private MessageService messageService;
@@ -38,19 +38,19 @@ public class MessageController {
         return new ResponseEntity<>(message, HttpStatus.OK);
     }
 
-    @GetMapping("by-sender")
+    @GetMapping("/by-sender")
     public ResponseEntity<Message> getMessagesBySenderID(@RequestParam(name = "sender") Long id) {
         Message message = messageService.getById(id);
         return new ResponseEntity<>(message, HttpStatus.OK);
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<Message> updated(@PathVariable("id") Long id, @RequestBody Message messageDetail){
+    public ResponseEntity<Message> update(@PathVariable("id") Long id, @RequestBody Message messageDetail){
         Message message = messageService.update(id, messageDetail);
         return new ResponseEntity<>(message, HttpStatus.ACCEPTED);
     }
 
-    @DeleteMapping("{id}")
+    @DeleteMapping("message/{id}")
     public ResponseEntity<HttpStatus> delete(@PathVariable("id") Long id){
         messageService.delete(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);

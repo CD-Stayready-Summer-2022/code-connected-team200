@@ -11,6 +11,6 @@ public interface MessageService {
     Iterable<Message> getAllFromChat(Chat chat);
     Iterable<Message> getAllBySenderId(Long id);
     Message update(Long id, Message message);
-    void delete(Long id);
+    boolean delete(Long id);
 
 }
