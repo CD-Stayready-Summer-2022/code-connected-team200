@@ -6,15 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="6b470c40-8fcf-47d9-897c-02870efac482" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-connected-server.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/comment/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/comment/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/comment/service/CommentServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/comment/service/CommentServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sql/comment.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sql/comment.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/team200/codeconnectedserver/comment/CommentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/team200/codeconnectedserver/domain/comment/CommentServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -48,10 +48,17 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
   <component name="ProjectId" id="2CGbzaJAOqmC1Y7JV9q8SsAi8Nd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
   <component name="RunManager" selected="JUnit.MessageServiceTest.createMessageTest">
     <configuration name="CodeConnectedServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -110,7 +117,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c044b8a1-e08c-4486-ab98-30b5c65c6bc2" name="Changes" comment="" />
+      <changelist id="6b470c40-8fcf-47d9-897c-02870efac482" name="Changes" comment="" />
       <created>1658432137028</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
