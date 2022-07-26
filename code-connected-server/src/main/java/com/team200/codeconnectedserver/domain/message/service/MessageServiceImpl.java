@@ -1,12 +1,8 @@
 package com.team200.codeconnectedserver.domain.message.service;
 
-<<<<<<< HEAD
-import com.team200.codeconnectedserver.domain.chat.model.Chat;
-=======
 import com.team200.codeconnectedserver.domain.chat.exceptions.ChatNotFoundException;
 import com.team200.codeconnectedserver.domain.chat.model.Chat;
 import com.team200.codeconnectedserver.domain.chat.services.ChatService;
->>>>>>> 5c43849cffd951cd0e35514b76a5702d1cacd168
 import com.team200.codeconnectedserver.domain.exceptions.ResourceNotFoundException;
 import com.team200.codeconnectedserver.domain.message.model.Message;
 import com.team200.codeconnectedserver.domain.message.repo.MessageRepo;
@@ -65,6 +61,5 @@ public class MessageServiceImpl implements MessageService{
         Message message  = getById(id);
         messageRepo.delete(message);
         return true;
-
     }
 }
