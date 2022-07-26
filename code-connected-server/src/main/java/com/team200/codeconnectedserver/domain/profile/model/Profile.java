@@ -6,10 +6,7 @@ import com.team200.codeconnectedserver.domain.job.model.Job;
 import lombok.*;
 import org.springframework.boot.context.config.Profiles;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -25,8 +22,10 @@ public class Profile {
     private String firstName;
     @NonNull
     private String lastName;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "blogPost")
     @NonNull
     List<Education> school;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "Profile")
     @NonNull
     List<Job> experience;
     @NonNull
@@ -35,10 +34,16 @@ public class Profile {
     private String email;
     @NonNull
     private String personalDescription;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "Profile")
     @NonNull
     private List<Profile> connections;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "Profile")
     @NonNull
-    private List<Profiles>followers;
+    private List<Profile>followers;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "Profile")
+    @NonNull
+    private List<Profile>following;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "Profile")
     @NonNull
     List<BlogPost> posts;
 
