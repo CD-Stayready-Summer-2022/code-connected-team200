@@ -1,4 +1,4 @@
-package com.team200.codeconnectedserver.comment;
+package com.team200.codeconnectedserver.domain.comment;
 
 import com.team200.codeconnectedserver.domain.blogpost.model.BlogPost;
 import com.team200.codeconnectedserver.domain.comment.models.Comment;

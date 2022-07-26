@@ -1,5 +1,6 @@
 package com.team200.codeconnectedserver.domain.message.contoller;
 
+import com.team200.codeconnectedserver.domain.chat.exceptions.ChatNotFoundException;
 import com.team200.codeconnectedserver.domain.message.model.Message;
 import com.team200.codeconnectedserver.domain.message.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin("*")
-@RequestMapping("/message")
+@RequestMapping("/api/v2/messages")
 public class MessageController {
     @Autowired
     private MessageService messageService;
@@ -19,31 +20,37 @@ public class MessageController {
         this.messageService = messageService;
     }
 
-    @PostMapping
-    public ResponseEntity<Message> createMessage(@RequestBody Message message) {
-        Message saveMessage = messageService.create(message);
+    @PostMapping("{id}")
+    //request from all the messages will be in the chat controller
+    public ResponseEntity<Message> createMessage(@RequestBody Message message, @PathVariable("id") Long id) {
+        Message saveMessage;
+        try {
+            saveMessage = messageService.create(message, id);
+        } catch (ChatNotFoundException e) {
+            throw new RuntimeException(e);
+        }
         return new ResponseEntity<>(saveMessage, HttpStatus.CREATED);
     }
 
-    @GetMapping("{id}")
+    @GetMapping("message/{id}")
     public ResponseEntity<Message> getMessageByID(@PathVariable Long id) {
         Message message = messageService.getById(id);
         return new ResponseEntity<>(message, HttpStatus.OK);
     }
 
-    @GetMapping("by-sender")
+    @GetMapping("/by-sender")
     public ResponseEntity<Message> getMessagesBySenderID(@RequestParam(name = "sender") Long id) {
         Message message = messageService.getById(id);
         return new ResponseEntity<>(message, HttpStatus.OK);
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<Message> updated(@PathVariable("id") Long id, @RequestBody Message messageDetail){
+    public ResponseEntity<Message> update(@PathVariable("id") Long id, @RequestBody Message messageDetail){
         Message message = messageService.update(id, messageDetail);
         return new ResponseEntity<>(message, HttpStatus.ACCEPTED);
     }
 
-    @DeleteMapping("{id}")
+    @DeleteMapping("message/{id}")
     public ResponseEntity<HttpStatus> delete(@PathVariable("id") Long id){
         messageService.delete(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);

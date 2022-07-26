@@ -29,16 +29,23 @@ public class ChatController {
         Chat saveChat = chatService.create();
         return new ResponseEntity<>(saveChat, HttpStatus.CREATED);
     }
-
+    /*
     @GetMapping("{id}")
     public ResponseEntity<Chat> getChatById(@PathVariable Long id) {
         Chat chat = chatService.getById(id);
         return new ResponseEntity<>(chat, HttpStatus.OK);
     }
 
+<<<<<<< HEAD
     @DeleteMapping("{id}")
     public ResponseEntity<HttpStatus> delete(@PathVariable("id") Long id){
         chatService.delete(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+=======
+     */
+
+
+
+>>>>>>> 5c43849cffd951cd0e35514b76a5702d1cacd168
 }

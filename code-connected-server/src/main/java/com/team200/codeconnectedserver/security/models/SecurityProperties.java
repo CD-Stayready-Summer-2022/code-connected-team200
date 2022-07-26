@@ -81,3 +81,4 @@ public class SecurityProperties {
         this.allowedPublicApis = allowedPublicApis;
     }
 }
+

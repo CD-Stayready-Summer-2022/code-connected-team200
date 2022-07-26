@@ -9,4 +9,5 @@ import java.util.Optional;
 
 public interface MessageRepo extends JpaRepository<Message, Long> {
     Iterable<Message> findBySenderId(Long id);
+    List<Message> findByChat(Chat chat);
 }

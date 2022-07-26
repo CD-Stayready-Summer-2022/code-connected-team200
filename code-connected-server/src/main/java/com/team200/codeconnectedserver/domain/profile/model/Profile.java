@@ -1,13 +1,15 @@
 package com.team200.codeconnectedserver.domain.profile.model;
 
 import com.team200.codeconnectedserver.domain.blogpost.model.BlogPost;
-import com.team200.codeconnectedserver.domain.job.model.Job;
-
 import com.team200.codeconnectedserver.domain.education.model.Education;
-
+import com.team200.codeconnectedserver.domain.job.model.Job;
 import lombok.*;
+import org.springframework.boot.context.config.Profiles;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.List;
 
 @Entity
@@ -24,22 +26,19 @@ public class Profile {
     @NonNull
     private String lastName;
     @NonNull
-    private String email;
-    @NonNull
-    private String password;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "school")
-    @NonNull
     List<Education> school;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "experience")
     @NonNull
     List<Job> experience;
     @NonNull
+    private String password;
+    @NonNull
+    private String email;
+    @NonNull
     private String personalDescription;
     @NonNull
-    private List<Profile> followers;
+    private List<Profile> connections;
     @NonNull
-    private List<Profile> following;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "school")
+    private List<Profiles>followers;
     @NonNull
     List<BlogPost> posts;
 

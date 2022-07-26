@@ -21,10 +21,15 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @ManyToOne
+    @JoinColumn(name = "sender_id")
     @NonNull
     private Profile sender;
     @NonNull
     private String body;
+
+    @NonNull
+    private Integer likes;
 
     @NonNull
     @ManyToOne()

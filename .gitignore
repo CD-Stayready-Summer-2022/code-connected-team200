@@ -3,6 +3,7 @@
 ./.idea
 **/.idea
 **/*.iml
+*.iml
 # User-specific stuff
 **/.idea/**/workspace.xml
 **/.idea/**/tasks.xml
@@ -28,7 +29,7 @@
 # Gradle
 .idea/**/gradle.xml
 .idea/**/libraries
-*.iml
+
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
 # since they will be recreated, and may cause churn.  Uncomment if using
@@ -80,5 +81,4 @@ fabric.properties
 
 .DS_Store
 .idea
-target/**
-firebase_config.json
+.gitignore
