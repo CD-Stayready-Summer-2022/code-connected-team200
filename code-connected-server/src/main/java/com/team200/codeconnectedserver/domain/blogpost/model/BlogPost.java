@@ -34,10 +34,6 @@ public class BlogPost {
     private List<Comment> commentsList;
 
     @NonNull
-    @ManyToOne(cascade =CascadeType.ALL)
-    private List<Group>groupList;
-
-    @NonNull
     @ManyToOne(cascade = CascadeType.ALL)
     private Profile profile;
 

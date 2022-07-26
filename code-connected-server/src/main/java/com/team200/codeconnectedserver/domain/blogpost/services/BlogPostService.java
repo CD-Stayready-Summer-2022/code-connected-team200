@@ -14,7 +14,7 @@ public interface BlogPostService {
      BlogPost getById(Long id);
      List<BlogPost> getByProfile(Long id) throws ProfileNotFoundException;
      List<BlogPost> getByGroupName(String groupName);
-     void  likePost(Long id, BlogPost blogPostDetail)throws ResourceNotFoundException;
+     BlogPost likePost(Long id, BlogPost blogPostDetail)throws ResourceNotFoundException;
 
 
 

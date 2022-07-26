@@ -4,6 +4,7 @@ import com.team200.codeconnectedserver.domain.blogpost.model.BlogPost;
 import com.team200.codeconnectedserver.domain.blogpost.repo.BlogPostRepo;
 import com.team200.codeconnectedserver.domain.exceptions.ResourceNotFoundException;
 
+import com.team200.codeconnectedserver.domain.group.model.Group;
 import com.team200.codeconnectedserver.domain.profile.service.ProfileService;
 import com.team200.codeconnectedserver.exceptions.ProfileNotFoundException;
 import org.slf4j.Logger;
@@ -52,7 +53,7 @@ public class BlogPostServiceImpl implements BlogPostService {
 
     @Override
     public List<BlogPost> getByGroupName(String groupName) throws ResourceNotFoundException {
-        List<BlogPost>blogPosts = (List)blogPostRepo.findByGroupName(groupName);
+        List<BlogPost>blogPosts = (List<BlogPost>) blogPostRepo.findByGroupName(groupName);
         if(blogPosts.size()==0){
             throw new ResourceNotFoundException("no blog posts are associated with that group name");
         }
@@ -62,11 +63,11 @@ public class BlogPostServiceImpl implements BlogPostService {
 
 
     @Override
-    public void likePost(Long id, BlogPost blogPostDetail) throws ResourceNotFoundException {
+    public BlogPost likePost(Long id, BlogPost blogPostDetail) throws ResourceNotFoundException {
         BlogPost savedBlogPost = getById(id);
         int currentNumberOfLikes =blogPostDetail.getLikes();
         savedBlogPost.setLikes(currentNumberOfLikes+1);
-        blogPostRepo.save(savedBlogPost);
+       return  blogPostRepo.save(savedBlogPost);
 
 
     }
