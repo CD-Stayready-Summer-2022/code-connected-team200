@@ -1,15 +1,18 @@
 package com.team200.codeconnectedserver.domain.message.service;
 
-import com.team200.codeconnectedserver.domain.core.Exceptions.ResourceNotFoundException;
+import com.team200.codeconnectedserver.domain.chat.model.Chat;
+import com.team200.codeconnectedserver.domain.exceptions.ResourceNotFoundException;
 import com.team200.codeconnectedserver.domain.message.model.Message;
 import com.team200.codeconnectedserver.domain.message.repo.MessageRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
 public class MessageServiceImpl implements MessageService{
+
     private MessageRepo messageRepo;
 
     @Autowired

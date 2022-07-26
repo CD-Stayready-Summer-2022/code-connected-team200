@@ -1,7 +1,10 @@
 package com.team200.codeconnectedserver.domain.message.service;
 
 import com.team200.codeconnectedserver.domain.core.Exceptions.ResourceNotFoundException;
+import com.team200.codeconnectedserver.domain.exceptions.ResourceNotFoundException;
 import com.team200.codeconnectedserver.domain.message.model.Message;
+
+import java.util.List;
 
 public interface MessageService {
     Message create(Message message);
