@@ -8,7 +8,7 @@ import com.team200.codeconnectedserver.security.models.Credentials;
 import com.team200.codeconnectedserver.security.models.FireBaseUser;
 import com.team200.codeconnectedserver.security.models.SecurityProperties;
 import com.team200.codeconnectedserver.security.utils.CookieUtils;
-import com.team200.codeconnectedserver.security.utils.services.SecurityService;
+import com.team200.codeconnectedserver.security.utils.SecurityService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

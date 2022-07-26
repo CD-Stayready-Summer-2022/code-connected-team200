@@ -6,12 +6,17 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 @NoArgsConstructor
 @RequiredArgsConstructor
 @Data
 public class Education {
+
+    @Id
+    @NonNull
+    private Long id;
 
     @NonNull
     private String degree;
