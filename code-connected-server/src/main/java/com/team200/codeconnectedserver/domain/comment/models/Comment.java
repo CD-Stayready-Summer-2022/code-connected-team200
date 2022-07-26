@@ -11,7 +11,6 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @NoArgsConstructor
-@RequiredArgsConstructor
 @Data
 @ToString
 @Entity
@@ -21,6 +20,8 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @ManyToOne
+    @JoinColumn(name = "sender_id")
     @NonNull
     private Profile sender;
     @NonNull

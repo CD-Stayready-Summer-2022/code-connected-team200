@@ -19,8 +19,8 @@ public class Group {
     private String groupName;
 
     @NonNull
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "blogPosts")
-    private List<BlogPost>blogPosts;
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "group")
+    private List<BlogPost> blogPosts;
 
     @NonNull
     @ManyToOne(cascade = CascadeType.ALL)
@@ -28,8 +28,12 @@ public class Group {
 
     @NonNull
     @ManyToMany
-    private List<Profile>admins;
+    private List<Profile> admins;
 
-
-
+    @NonNull
+    @ManyToMany
+    private List<Profile> members;
 }
+
+
+
