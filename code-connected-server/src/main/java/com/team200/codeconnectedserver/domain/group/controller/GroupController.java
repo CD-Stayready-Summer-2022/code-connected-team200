@@ -19,6 +19,8 @@ public class GroupController {
         groupService.create(group);
         return new ResponseEntity<>(group, HttpStatus.CREATED);
     }
+    @PostMapping
+    public  ResponseEntity<Group>
 
 
 }

@@ -5,30 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b470c40-8fcf-47d9-897c-02870efac482" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/models/CookieProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/utils/ObjectMapperUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/team200/codeconnectedserver/BaseControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/team200/codeconnectedserver/domain/message/controller/MessageControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/team200/codeconnectedserver/security/PrincipalDetailsArgumentResolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/message/contoller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/message/contoller/MessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/message/service/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/message/service/MessageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/message/service/MessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/message/service/MessageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/config/FirebaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/config/FirebaseConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/enums/CredentialType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/enums/CredentialType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/filters/SecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/filters/SecurityFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/models/Credentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/models/Credentials.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/models/FireBaseUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/models/FireBaseUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/models/FirebaseProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/models/FirebaseProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/models/SecurityProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/models/SecurityProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/utils/CookieUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/utils/CookieUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/utils/SecurityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/utils/SecurityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/firebase_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/firebase_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/team200/codeconnectedserver/blogpost/BlogPostServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/team200/codeconnectedserver/domain/blogpost/BlogPostServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/group/controller/GroupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/group/controller/GroupController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
