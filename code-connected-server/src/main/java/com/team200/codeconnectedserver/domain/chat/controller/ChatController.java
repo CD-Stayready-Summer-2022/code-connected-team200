@@ -34,12 +34,14 @@ public class ChatController {
 //        Chat chat = chatService.create(Person1, Person2);
         return new ResponseEntity<>(chat,HttpStatus.OK);
     }
-
+    /*
     @GetMapping("{id}")
     public ResponseEntity<Chat> getById(PathVariable("id") Long id){
         Chat chat = chatService.getById(id);
         return new ResponseEntity<>(chat, HttpStatus.OK);
     }
+
+     */
 
 
 
