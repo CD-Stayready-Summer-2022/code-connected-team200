@@ -14,6 +14,7 @@ import java.util.Optional;
 
 @Service
 public class MessageServiceImpl implements MessageService{
+
     private MessageRepo messageRepo;
     private ChatService chatService;
 
@@ -60,6 +61,5 @@ public class MessageServiceImpl implements MessageService{
         Message message  = getById(id);
         messageRepo.delete(message);
         return true;
-
     }
 }
