@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 import com.team200.codeconnectedserver.domain.education.service.EducationService;
 import com.team200.codeconnectedserver.domain.education.model.Education;
 
+import java.util.List;
+
 @RestController
 @CrossOrigin("*")
 @RequestMapping("/api/v1/education")

@@ -1,9 +1,10 @@
 package com.team200.codeconnectedserver.domain.education.service;
 
-import antlr.collections.List;
 import com.team200.codeconnectedserver.domain.education.model.Education;
 import com.team200.codeconnectedserver.domain.exceptions.ResourceCreationException;
 import com.team200.codeconnectedserver.domain.exceptions.ResourceNotFoundException;
+
+import java.util.List;
 
 public interface EducationService {
     Education create(Education job) throws ResourceCreationException;

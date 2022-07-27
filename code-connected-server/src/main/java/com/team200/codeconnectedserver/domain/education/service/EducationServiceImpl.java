@@ -1,14 +1,16 @@
 package com.team200.codeconnectedserver.domain.education.service;
 
-import antlr.collections.List;
 import com.team200.codeconnectedserver.domain.education.model.Education;
 import com.team200.codeconnectedserver.domain.education.repo.EducationRepository;
 import com.team200.codeconnectedserver.domain.exceptions.ResourceCreationException;
 import com.team200.codeconnectedserver.domain.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
+@Service
 public class EducationServiceImpl implements EducationService{
     private EducationRepository educationRepository;
 
