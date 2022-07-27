@@ -11,9 +11,8 @@ import java.util.Optional;
 public interface GroupService {
     Group create(Group group)throws ResourceCreationException;
     Group getById(Long id)throws ResourceNotFoundException;
-    List<Profile> getMembers() ;
-    List<Profile>getAdmins();
     Group addMember(Long id, Profile profile);
+
     void delete(Long id)throws ResourceNotFoundException;
 
 }

@@ -30,5 +30,8 @@ public class Message {
     protected void onCreate() {
         date = new Date();
     }
+
+    public void setChat(Chat chat) {
+    }
 }
 

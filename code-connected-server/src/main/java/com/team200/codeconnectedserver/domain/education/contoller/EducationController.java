@@ -20,7 +20,7 @@ public class EducationController {
         this.educationService = educationService;
     }
 
-    @GetMapping
+    @GetMapping("/GetAll/")
     public ResponseEntity<List<Education>> getAll(){
         List<Education> education = educationService.getAll();
         return new ResponseEntity<>(education, HttpStatus.OK);
@@ -38,8 +38,8 @@ public class EducationController {
         return new ResponseEntity<>(education, HttpStatus.OK);
     }
 
-    @GetMapping()
-    public ResponseEntity<Education> getByDegree(@RequestParam String degree){
+    @GetMapping("/GetDegree/")
+    public ResponseEntity<Education> getDegree(@RequestParam ("id") String degree){
         Education education = educationService.getByDegree(degree);
         return new ResponseEntity<>(education, HttpStatus.OK);
     }

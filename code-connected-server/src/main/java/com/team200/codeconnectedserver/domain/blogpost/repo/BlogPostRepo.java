@@ -6,7 +6,9 @@ import com.team200.codeconnectedserver.domain.profile.model.Profile;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface BlogPostRepo extends JpaRepository<BlogPost,Long> {
-    Iterable<BlogPost>findByGroup(Group group);
+
+
     Iterable<BlogPost>findByProfile(Profile profile);
+    Iterable<BlogPost> findByGroup(Group group);
 
 }

@@ -20,7 +20,7 @@ public class JobController {
     public JobController(JobService jobService){
         this.jobService = jobService;
     }
-    @GetMapping
+    @GetMapping("/GetAll/")
     public ResponseEntity<List<Job>> getAll(){
         List<Job> job = jobService.getAll();
         return new ResponseEntity<>(job, HttpStatus.OK);
@@ -38,13 +38,13 @@ public class JobController {
         return  new ResponseEntity<>(job, HttpStatus.OK);
     }
 
-    @GetMapping()
+    @GetMapping("/GetJobTitle/")
     public  ResponseEntity<Job> getByJobTitle(@RequestParam String jobTitle){
         Job job = jobService.getByJobTitle(jobTitle);
         return new ResponseEntity<>(job, HttpStatus.OK);
     }
 
-    @GetMapping("{id}")
+    @PutMapping("{id}")
     public ResponseEntity<Job> update(@PathVariable("id") Long id, @RequestBody Job jobDetail){
         jobDetail = jobService.update(id, jobDetail);
         return new ResponseEntity<>(jobDetail, HttpStatus.ACCEPTED);

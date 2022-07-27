@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping()
+@RequestMapping("/api/v1/Group")
 public class GroupController {
     private GroupService groupService;
 
@@ -19,6 +19,7 @@ public class GroupController {
         groupService.create(group);
         return new ResponseEntity<>(group, HttpStatus.CREATED);
     }
+
 
 
 }
