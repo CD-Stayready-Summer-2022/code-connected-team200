@@ -22,28 +22,28 @@ public class Profile {
     private String firstName;
     @NonNull
     private String lastName;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "blogPost")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "profile")
     @NonNull
     List<Education> school;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "Profile")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "profile")
     @NonNull
     List<Job> experience;
     @NonNull
-    private String password;
-    @NonNull
     private String email;
     @NonNull
+    private String password;
+    @NonNull
     private String personalDescription;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "Profile")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "profile")
     @NonNull
     private List<Profile> connections;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "Profile")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "profile")
     @NonNull
     private List<Profile>followers;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "Profile")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "profile")
     @NonNull
     private List<Profile>following;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "Profile")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "profile")
     @NonNull
     List<BlogPost> posts;
 

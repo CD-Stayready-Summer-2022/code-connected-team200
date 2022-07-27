@@ -27,6 +27,5 @@ public class ProfileServiceTest {
 
     @BeforeEach
     public void setUp01(){
-        //mockProfile01 = new Profile(5L,"David","Adeleke")
         }
 }

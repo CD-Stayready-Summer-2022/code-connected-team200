@@ -2,18 +2,15 @@ package com.team200.codeconnectedserver.domain.chat.model;
 
 import com.team200.codeconnectedserver.domain.message.model.Message;
 import com.team200.codeconnectedserver.domain.profile.model.Profile;
-<<<<<<< HEAD
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.Date;
-=======
-import lombok.*;
 
-import javax.persistence.*;
->>>>>>> 5c43849cffd951cd0e35514b76a5702d1cacd168
 import java.util.List;
 
 @Entity(name = "chats")
@@ -27,8 +24,6 @@ public class Chat {
     //chagne to profile object when it becomes available
     @OneToMany(cascade = CascadeType.ALL)
     private List<Message> messages;
-
-<<<<<<< HEAD
     @Temporal(TemporalType.TIMESTAMP)
     private Date date;
 
@@ -39,6 +34,5 @@ public class Chat {
     protected void onCreate(){
         date = new Date();
     }
-=======
->>>>>>> 5c43849cffd951cd0e35514b76a5702d1cacd168
+
 }
