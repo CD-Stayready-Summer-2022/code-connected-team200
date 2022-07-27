@@ -35,19 +35,7 @@ public class ProfileServiceImpl  implements ProfileService{
         return profile;
     }
 
-    @Override
-    public List<Profile> getAllFollowers(Long id) throws ResourceNotFoundException {
-        Profile profile = profileRepo.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("profile with id does not exists " + id));
-        return profile.getFollowers();
-    }
 
-    @Override
-    public List<Profile> getAllFollowing(Long id) throws ResourceNotFoundException {
-        Profile profile = profileRepo.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("profile with id does not exists " + id));
-        return profile.getFollowers();
-    }
 
     @Override
     public Optional<Profile> getByEmail(String email) throws ResourceNotFoundException {
@@ -76,8 +64,6 @@ public class ProfileServiceImpl  implements ProfileService{
         savedProfile.setSchool(profileDetail.getSchool());
         savedProfile.setExperience(profileDetail.getExperience());
         savedProfile.setPersonalDescription(profileDetail.getPersonalDescription());
-        savedProfile.setFollowers(profileDetail.getFollowers());
-        savedProfile.setFollowing(profileDetail.getFollowing());
         return profileRepo.save(savedProfile);
     }
 
