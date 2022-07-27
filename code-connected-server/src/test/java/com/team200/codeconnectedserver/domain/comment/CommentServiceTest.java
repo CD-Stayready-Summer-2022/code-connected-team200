@@ -39,9 +39,6 @@ public class CommentServiceTest {
         testComment2 = new Comment(new Profile(),"Test comment 2",new BlogPost());
         testComment1.setId(1l);
         testComment2.setId(1l);
-
-
-
     }
 
     @Test
@@ -50,15 +47,12 @@ public class CommentServiceTest {
         BDDMockito.doReturn(inputComment).when(commentRepo).save(inputComment);
         Comment actualComment = commentService.create(testComment1);
         Assertions.assertEquals(actualComment,testComment1);
-
     }
 
     @Test
     @DisplayName("Create Test - Fail")
     public void createTest02() {
        // BDDMockito.doReturn()
-
     }
-
 
 }
