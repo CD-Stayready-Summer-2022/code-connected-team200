@@ -1,10 +1,8 @@
 package com.team200.codeconnectedserver.domain.profile.model;
 
 import com.team200.codeconnectedserver.domain.blogpost.model.BlogPost;
-import com.team200.codeconnectedserver.domain.job.model.Job;
-
 import com.team200.codeconnectedserver.domain.education.model.Education;
-
+import com.team200.codeconnectedserver.domain.job.model.Job;
 import lombok.*;
 
 import javax.persistence.*;
@@ -15,6 +13,7 @@ import java.util.List;
 @ToString
 @NoArgsConstructor
 @RequiredArgsConstructor
+@Table(name = "profile")
 public class Profile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,23 +22,20 @@ public class Profile {
     private String firstName;
     @NonNull
     private String lastName;
-    @NonNull
-    private String email;
-    @NonNull
-    private String password;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "school")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "profile")
     @NonNull
     List<Education> school;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "experience")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "profile")
     @NonNull
     List<Job> experience;
     @NonNull
+    private String password;
+    @NonNull
+    private String email;
+    @NonNull
     private String personalDescription;
-    @NonNull
-    private List<Profile> followers;
-    @NonNull
-    private List<Profile> following;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "school")
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "profile")
     @NonNull
     List<BlogPost> posts;
 

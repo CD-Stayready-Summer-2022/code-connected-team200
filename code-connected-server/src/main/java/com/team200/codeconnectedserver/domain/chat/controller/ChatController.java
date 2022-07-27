@@ -1,6 +1,5 @@
 package com.team200.codeconnectedserver.domain.chat.controller;
 
-import com.team200.codeconnectedserver.domain.chat.exceptions.ChatNotFoundException;
 import com.team200.codeconnectedserver.domain.chat.model.Chat;
 import com.team200.codeconnectedserver.domain.chat.services.ChatService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,33 +13,29 @@ import java.util.List;
 @CrossOrigin("*")
 @RequestMapping("/api/v1/chats")
 public class ChatController {
+    @Autowired
     private ChatService chatService;
 
     @Autowired
-    public ChatController(ChatService chatService) throws ChatNotFoundException {
+    public ChatController(ChatService chatService) {
         this.chatService = chatService;
     }
 
-    @GetMapping
-    public ResponseEntity<List<Chat>> getAll(){
-        List<Chat> chats = chatService.getAll();
-        return new ResponseEntity<>(chats, HttpStatus.OK);
-    }
-
-    @GetMapping
-    public ResponseEntity<Chat> sendChat(@RequestBody Chat chat){
-        //???????
-        //How do I pass two profiles to the method in the constructor???
-//        Chat chat = chatService.create(Person1, Person2);
-        return new ResponseEntity<>(chat,HttpStatus.OK);
+    @PostMapping
+    public ResponseEntity<Chat> createChat() {
+        Chat saveChat = chatService.create();
+        return new ResponseEntity<>(saveChat, HttpStatus.CREATED);
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<Chat> getById(PathVariable("id") Long id){
+    public ResponseEntity<Chat> getChatById(@PathVariable Long id) {
         Chat chat = chatService.getById(id);
         return new ResponseEntity<>(chat, HttpStatus.OK);
     }
 
-
-
+    @DeleteMapping("{id}")
+    public ResponseEntity<HttpStatus> delete(@PathVariable("id") Long id){
+        chatService.delete(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
 }

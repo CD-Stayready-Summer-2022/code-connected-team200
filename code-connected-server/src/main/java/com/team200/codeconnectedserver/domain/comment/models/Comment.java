@@ -11,7 +11,6 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @NoArgsConstructor
-@RequiredArgsConstructor
 @Data
 @ToString
 @Entity
@@ -21,17 +20,25 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @ManyToOne
+    @JoinColumn(name = "sender_id")
     @NonNull
     private Profile sender;
     @NonNull
     private String body;
 
-    @NonNull
     private Integer likes;
 
     @NonNull
     @ManyToOne()
     private BlogPost blogPost;
+
+    public Comment(Profile sender,  String body,  BlogPost blogPost) {
+        this.sender = sender;
+        this.body = body;
+        this.likes = 0;
+        this.blogPost = blogPost;
+    }
 
     @Override
     public boolean equals(Object o) {

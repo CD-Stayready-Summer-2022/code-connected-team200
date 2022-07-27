@@ -2,19 +2,19 @@ package com.team200.codeconnectedserver.domain.blogpost.services;
 
 import com.team200.codeconnectedserver.domain.blogpost.model.BlogPost;
 import com.team200.codeconnectedserver.domain.blogpost.repo.BlogPostRepo;
-import com.team200.codeconnectedserver.domain.exceptions.ResourceCreationException;
 import com.team200.codeconnectedserver.domain.exceptions.ResourceNotFoundException;
+
 import com.team200.codeconnectedserver.domain.group.model.Group;
-import com.team200.codeconnectedserver.domain.profile.model.Profile;
 import com.team200.codeconnectedserver.domain.profile.service.ProfileService;
-import com.team200.codeconnectedserver.exceptions.ProfileNotFoundException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class BlogPostServiceImpl implements BlogPostService {
     private final BlogPostRepo blogPostRepo;
     private static Logger logger = LoggerFactory.getLogger(BlogPostServiceImpl.class);
@@ -43,7 +43,7 @@ public class BlogPostServiceImpl implements BlogPostService {
     }
 
     @Override
-    public List<BlogPost> getByProfile(Long Profile_id) throws ResourceNotFoundException, ProfileNotFoundException {
+    public List<BlogPost> getByProfile(Long Profile_id) throws ResourceNotFoundException{
         List<BlogPost>blogPosts = (List)blogPostRepo.findByProfile(profileService.getById(Profile_id));
         if(blogPosts.size()==0){
             logger.error("blogposts with that id are not found ");
@@ -53,20 +53,22 @@ public class BlogPostServiceImpl implements BlogPostService {
     }
 
     @Override
-    public List<BlogPost> getByGroupName(String groupName) throws ResourceNotFoundException {
-        List<BlogPost>blogPosts = (List)blogPostRepo.findByGroupName(groupName);
+    public List<BlogPost> getByGroup(Group group) throws ResourceNotFoundException {
+        List<BlogPost>blogPosts = (List<BlogPost>) blogPostRepo.findByGroup(group);
         if(blogPosts.size()==0){
             throw new ResourceNotFoundException("no blog posts are associated with that group name");
         }
         return blogPosts;
     }
 
+
+
     @Override
-    public void likePost(Long id,BlogPost blogPostDetail) throws ResourceNotFoundException {
+    public BlogPost likePost(Long id, BlogPost blogPostDetail) throws ResourceNotFoundException {
         BlogPost savedBlogPost = getById(id);
         int currentNumberOfLikes =blogPostDetail.getLikes();
         savedBlogPost.setLikes(currentNumberOfLikes+1);
-        blogPostRepo.save(savedBlogPost);
+        return  blogPostRepo.save(savedBlogPost);
 
 
     }
