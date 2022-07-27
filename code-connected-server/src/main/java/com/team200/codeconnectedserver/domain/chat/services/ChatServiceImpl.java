@@ -1,8 +1,10 @@
 package com.team200.codeconnectedserver.domain.chat.services;
 
+import com.team200.codeconnectedserver.domain.chat.exceptions.ChatNotFoundException;
 import com.team200.codeconnectedserver.domain.chat.model.Chat;
 import com.team200.codeconnectedserver.domain.chat.repo.ChatRepo;
 import com.team200.codeconnectedserver.domain.core.exceptions.ResourceNotFoundException;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,7 +14,7 @@ import java.util.Optional;
 
 @Service
 @Slf4j
-public class ChatServiceImpl implements ChatService{
+public class ChatServiceImpl implements ChatService {
 
     private ChatRepo chatRepo;
 
@@ -31,7 +33,7 @@ public class ChatServiceImpl implements ChatService{
     @Override
     public Chat getById(Long chatId) {
         Optional<Chat> optional = chatRepo.findById(chatId);
-        if(optional.isPresent())
+        if (optional.isPresent())
             throw new ResourceNotFoundException("Chat Does Not Exist");
         return optional.get();
     }
