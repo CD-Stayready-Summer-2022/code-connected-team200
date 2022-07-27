@@ -2,7 +2,6 @@ package com.team200.codeconnectedserver.domain.blogpost.controller;
 
 import com.team200.codeconnectedserver.domain.blogpost.model.BlogPost;
 import com.team200.codeconnectedserver.domain.blogpost.services.BlogPostService;
-import com.team200.codeconnectedserver.domain.group.model.Group;
 import com.team200.codeconnectedserver.exceptions.ProfileNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package com.team200.codeconnectedserver.domain.profile.repo;
+package com.team200.codeconnectedserver.domain.profile.repoprofile;
 
 import com.team200.codeconnectedserver.domain.profile.model.Profile;
 import org.springframework.data.jpa.repository.JpaRepository;

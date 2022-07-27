@@ -1,9 +1,9 @@
-package com.team200.codeconnectedserver.domain.employment.services;
+package com.team200.codeconnectedserver.domain.job.services;
 
 
 import com.team200.codeconnectedserver.domain.core.exceptions.ResourceCreationException;
 import com.team200.codeconnectedserver.domain.core.exceptions.ResourceNotFoundException;
-import com.team200.codeconnectedserver.domain.employment.model.Job;
+import com.team200.codeconnectedserver.domain.job.model.Job;
 
 import java.util.List;
 

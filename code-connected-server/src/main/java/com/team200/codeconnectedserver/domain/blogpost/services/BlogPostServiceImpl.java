@@ -4,7 +4,6 @@ import com.team200.codeconnectedserver.domain.blogpost.model.BlogPost;
 import com.team200.codeconnectedserver.domain.blogpost.repo.BlogPostRepo;
 import com.team200.codeconnectedserver.domain.exceptions.ResourceNotFoundException;
 
-import com.team200.codeconnectedserver.domain.group.model.Group;
 import com.team200.codeconnectedserver.domain.profile.service.ProfileService;
 import com.team200.codeconnectedserver.exceptions.ProfileNotFoundException;
 import org.slf4j.Logger;

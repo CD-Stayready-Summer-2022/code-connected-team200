@@ -1,9 +1,8 @@
-package com.team200.codeconnectedserver.domain.employment.controller;
+package com.team200.codeconnectedserver.domain.job.controller;
 
-import com.team200.codeconnectedserver.domain.employment.model.Job;
-import com.team200.codeconnectedserver.domain.employment.services.JobService;
+import com.team200.codeconnectedserver.domain.job.model.Job;
+import com.team200.codeconnectedserver.domain.job.services.JobService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.batch.BatchProperties;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

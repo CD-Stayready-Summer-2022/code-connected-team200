@@ -1,6 +1,6 @@
-package com.team200.codeconnectedserver.domain.employment.repo;
+package com.team200.codeconnectedserver.domain.job.repo;
 
-import com.team200.codeconnectedserver.domain.employment.model.Job;
+import com.team200.codeconnectedserver.domain.job.model.Job;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

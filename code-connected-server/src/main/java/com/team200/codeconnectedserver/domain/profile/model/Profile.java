@@ -2,9 +2,8 @@ package com.team200.codeconnectedserver.domain.profile.model;
 
 import com.team200.codeconnectedserver.domain.blogpost.model.BlogPost;
 import com.team200.codeconnectedserver.domain.education.model.Education;
-import com.team200.codeconnectedserver.domain.employment.model.Job;
+import com.team200.codeconnectedserver.domain.job.model.Job;
 import lombok.*;
-import org.springframework.boot.context.config.Profiles;
 
 import javax.persistence.*;
 import java.util.List;
@@ -22,7 +21,7 @@ public class Profile {
     private String firstName;
     @NonNull
     private String lastName;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "blogPost")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "Profile")
     @NonNull
     List<Education> school;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "Profile")
