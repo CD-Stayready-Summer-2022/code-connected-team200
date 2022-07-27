@@ -1,14 +1,12 @@
 package com.team200.codeconnectedserver.domain.education.model;
 
+import com.team200.codeconnectedserver.domain.profile.model.Profile;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @NoArgsConstructor
@@ -32,6 +30,9 @@ public class Education {
 
     @NonNull
     private String description;
+    @ManyToOne
+    @NonNull
+    private Profile profile;
 
     public String toString(){
         return String.format("%d %s %s %s %s", id, degree,school,graduationDate,description);

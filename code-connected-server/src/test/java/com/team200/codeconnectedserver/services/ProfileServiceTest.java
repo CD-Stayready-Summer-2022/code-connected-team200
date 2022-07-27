@@ -1,7 +1,7 @@
 package com.team200.codeconnectedserver.services;
 
 import com.team200.codeconnectedserver.domain.profile.model.Profile;
-import com.team200.codeconnectedserver.domain.profile.repoprofile.ProfileRepo;
+import com.team200.codeconnectedserver.domain.profile.repo.ProfileRepo;
 import com.team200.codeconnectedserver.domain.profile.service.ProfileService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;

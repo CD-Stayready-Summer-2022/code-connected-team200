@@ -3,7 +3,7 @@ package com.team200.codeconnectedserver.domain.profile.service;
 import com.team200.codeconnectedserver.domain.core.exceptions.ResourceCreationException;
 import com.team200.codeconnectedserver.domain.core.exceptions.ResourceNotFoundException;
 import com.team200.codeconnectedserver.domain.profile.model.Profile;
-import com.team200.codeconnectedserver.domain.profile.repoprofile.ProfileRepo;
+import com.team200.codeconnectedserver.domain.profile.repo.ProfileRepo;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

@@ -4,15 +4,17 @@ import com.team200.codeconnectedserver.domain.blogpost.model.BlogPost;
 import com.team200.codeconnectedserver.domain.blogpost.repo.BlogPostRepo;
 import com.team200.codeconnectedserver.domain.exceptions.ResourceNotFoundException;
 
+import com.team200.codeconnectedserver.domain.group.model.Group;
 import com.team200.codeconnectedserver.domain.profile.service.ProfileService;
 import com.team200.codeconnectedserver.exceptions.ProfileNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class BlogPostServiceImpl implements BlogPostService {
     private final BlogPostRepo blogPostRepo;
     private static Logger logger = LoggerFactory.getLogger(BlogPostServiceImpl.class);
@@ -51,8 +53,8 @@ public class BlogPostServiceImpl implements BlogPostService {
     }
 
     @Override
-    public List<BlogPost> getByGroupName(String groupName) throws ResourceNotFoundException {
-        List<BlogPost>blogPosts = (List<BlogPost>) blogPostRepo.findByGroupName(groupName);
+    public List<BlogPost> getByGroup(Group group) throws ResourceNotFoundException {
+        List<BlogPost>blogPosts = (List<BlogPost>) blogPostRepo.findByGroup(group);
         if(blogPosts.size()==0){
             throw new ResourceNotFoundException("no blog posts are associated with that group name");
         }

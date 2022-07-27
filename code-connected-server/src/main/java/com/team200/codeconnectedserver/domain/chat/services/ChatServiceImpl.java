@@ -1,6 +1,6 @@
 package com.team200.codeconnectedserver.domain.chat.services;
 
-import com.team200.codeconnectedserver.domain.chat.exceptions.ChatNotFoundException;
+
 import com.team200.codeconnectedserver.domain.chat.model.Chat;
 import com.team200.codeconnectedserver.domain.chat.repo.ChatRepo;
 import com.team200.codeconnectedserver.domain.core.exceptions.ResourceNotFoundException;

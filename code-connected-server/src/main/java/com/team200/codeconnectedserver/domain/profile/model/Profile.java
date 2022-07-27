@@ -21,10 +21,10 @@ public class Profile {
     private String firstName;
     @NonNull
     private String lastName;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "Profile")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "profile")
     @NonNull
     List<Education> school;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "Profile")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "profile")
     @NonNull
     List<Job> experience;
     @NonNull
@@ -33,16 +33,16 @@ public class Profile {
     private String email;
     @NonNull
     private String personalDescription;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "Profile")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "connections")
     @NonNull
     private List<Profile> connections;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "Profile")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "followers")
     @NonNull
     private List<Profile>followers;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "Profile")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "following")
     @NonNull
     private List<Profile>following;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "Profile")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "profile")
     @NonNull
     List<BlogPost> posts;
 
