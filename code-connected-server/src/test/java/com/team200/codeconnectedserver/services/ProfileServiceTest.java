@@ -89,8 +89,8 @@ public class ProfileServiceTest {
         List<Profile> profiles = new ArrayList<>();
         profiles.add(savedProfile01);
         profiles.add(savedProfile02);
-        BDDMockito.doReturn(profiles).when(profileRepo).findByLastName("Hook");
-        List<Profile> actualPeople = profileService.getByLastName("Hook");
+        BDDMockito.doReturn(profiles).when(profileRepo).findByLastName("lastName");
+        List<Profile> actualPeople = profileService.getByLastName("lastName");
         Integer expected = 2;
         Integer actual = actualPeople.size();
         Assertions.assertEquals(expected, actual);
