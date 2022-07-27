@@ -4,7 +4,6 @@ import com.team200.codeconnectedserver.domain.blogpost.model.BlogPost;
 import com.team200.codeconnectedserver.domain.blogpost.services.BlogPostService;
 import com.team200.codeconnectedserver.domain.comment.models.Comment;
 import com.team200.codeconnectedserver.domain.comment.repo.CommentRepo;
-import com.team200.codeconnectedserver.domain.comment.service.CommentService;
 import com.team200.codeconnectedserver.domain.exceptions.ResourceCreationException;
 import com.team200.codeconnectedserver.domain.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -67,9 +66,9 @@ public class CommentServiceImp implements CommentService {
     }
 
     @Override
-    public Iterable<Comment> getByBlogPost(Long id) throws ResourceNotFoundException {
+    public List<Comment> getByBlogPost(Long id) throws ResourceNotFoundException {
         BlogPost blogPost = blogPostService.getById(id);
-        Iterable<Comment> comments = commentRepo.findByBlogPost(blogPost);
+        List<Comment> comments = (List<Comment>) commentRepo.findByBlogPost(blogPost);
         return comments;
     }
 }

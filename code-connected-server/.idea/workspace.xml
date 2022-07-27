@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="6b470c40-8fcf-47d9-897c-02870efac482" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/src/test/java/com/team200/codeconnectedserver/domain/blogpost/BlogPostControllerTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/com/team200/codeconnectedserver/domain/blogpost/JsonConverter.java" afterDir="false" />
@@ -12,11 +13,15 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/profile/service/ProfileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/profile/service/ProfileServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/team200/codeconnectedserver/domain/blogpost/BlogPostServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/team200/codeconnectedserver/domain/blogpost/BlogPostServiceTest.java" afterDir="false" />
     </list>
+=======
+    <list default="true" id="79cf6c47-6e53-497b-85bc-b84fcd183641" name="Changes" comment="" />
+>>>>>>> 9a4ba94dfb01c06ea4f74216e27053f42aa3e642
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -27,10 +32,13 @@
       </list>
     </option>
   </component>
+=======
+>>>>>>> 9a4ba94dfb01c06ea4f74216e27053f42aa3e642
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+<<<<<<< HEAD
     <setting file="file://$PROJECT_DIR$/.idea/workspace.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/blogpost/model/BlogPost.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/blogpost/services/BlogPostServiceImpl.java" root0="FORCE_HIGHLIGHTING" />
@@ -104,12 +112,36 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+=======
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/group/model/Group.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/message/model/Message.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/blogpost/model/BlogPost.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/chat/controller/ChatController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/job/controller/JobController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/blogpost/services/BlogPostServiceImpl.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="RunManager">
+    <configuration name="CommentServiceTest.createTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="code-connected-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.team200.codeconnectedserver.domain.comment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.team200.codeconnectedserver.domain.comment" />
+      <option name="MAIN_CLASS_NAME" value="com.team200.codeconnectedserver.domain.comment.CommentServiceTest" />
+      <option name="METHOD_NAME" value="createTest" />
+      <option name="TEST_OBJECT" value="method" />
+>>>>>>> 9a4ba94dfb01c06ea4f74216e27053f42aa3e642
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="Application.CodeConnectedServerApplication" />
       </list>
     </recent_temporary>
@@ -139,4 +171,13 @@
       </map>
     </option>
   </component>
+=======
+        <item itemvalue="JUnit.CommentServiceTest.createTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+>>>>>>> 9a4ba94dfb01c06ea4f74216e27053f42aa3e642
 </project>

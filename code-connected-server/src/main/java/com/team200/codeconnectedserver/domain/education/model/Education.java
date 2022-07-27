@@ -6,6 +6,8 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
@@ -15,6 +17,7 @@ import javax.persistence.Id;
 public class Education {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @NonNull
     private Long id;
 
@@ -31,7 +34,7 @@ public class Education {
     private String description;
 
     public String toString(){
-        return String.format("%s %s %s %s", degree,school,graduationDate,description);
+        return String.format("%d %s %s %s %s", id, degree,school,graduationDate,description);
     }
 
 }
