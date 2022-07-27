@@ -14,8 +14,6 @@ import java.util.Optional;
 public interface ProfileService {
     Profile create(Profile profile) throws ResourceCreationException;
     Profile getById(Long id) throws ResourceNotFoundException;
-    List<Profile> getAllFollowers(Long id) throws ResourceNotFoundException;
-    List<Profile> getAllFollowing(Long id) throws ResourceNotFoundException;
     Optional<Profile> getByEmail(String email) throws ResourceNotFoundException;
     List<Profile> getByLastName(String LastName) throws ResourceNotFoundException;
 

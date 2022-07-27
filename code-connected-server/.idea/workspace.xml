@@ -31,21 +31,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/group/model/Group.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/message/model/Message.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/blogpost/model/BlogPost.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/application.yml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/workspace.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/blogpost/controller/BlogPostController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/blogpost/model/BlogPost.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/job/controller/JobController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/blogpost/services/BlogPostService.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/blogpost/services/BlogPostServiceImpl.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/chat/controller/ChatController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/group/model/Group.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/job/controller/JobController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/message/model/Message.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/profile/service/ProfileService.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/config/FirebaseConfig.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/resources/application.yml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/test/java/com/team200/codeconnectedserver/domain/blogpost/BlogPostControllerTest.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/test/java/com/team200/codeconnectedserver/domain/blogpost/BlogPostServiceTest.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/target/classes/com/team200/codeconnectedserver/domain/core/exceptions/ResourceCreationException.class" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/com/team200/codeconnectedserver/domain/blogpost/BlogPostControllerTest.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/security/config/FirebaseConfig.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/com/team200/codeconnectedserver/domain/blogpost/BlogPostServiceTest.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/chat/controller/ChatController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/profile/service/ProfileService.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -86,49 +86,21 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/kenne/dev/july-26-part2-KenCooper2022/pom.xml",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
-  }
-}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kenne\dev\code-connected-team200\code-connected-server\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BlogPostControllerTest">
-    <configuration name="BlogPostControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.CodeConnectedServerApplication">
+    <configuration name="CodeConnectedServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.team200.codeconnectedserver.CodeConnectedServerApplication" />
       <module name="code-connected-server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.team200.codeconnectedserver.domain.blogpost.*" />
+          <option name="PATTERN" value="com.team200.codeconnectedserver.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.team200.codeconnectedserver.domain.blogpost" />
-      <option name="MAIN_CLASS_NAME" value="com.team200.codeconnectedserver.domain.blogpost.BlogPostControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BlogPostServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="code-connected-server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.team200.codeconnectedserver.domain.blogpost.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.team200.codeconnectedserver.domain.blogpost" />
-      <option name="MAIN_CLASS_NAME" value="com.team200.codeconnectedserver.domain.blogpost.BlogPostServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -149,27 +121,61 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MessageServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CommentServiceTest.getByBlogPostTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="code-connected-server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.team200.codeconnectedserver.domain.message.service.*" />
+          <option name="PATTERN" value="com.team200.codeconnectedserver.domain.comment.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.team200.codeconnectedserver.domain.message.service" />
-      <option name="MAIN_CLASS_NAME" value="com.team200.codeconnectedserver.domain.message.service.MessageServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.team200.codeconnectedserver.domain.comment" />
+      <option name="MAIN_CLASS_NAME" value="com.team200.codeconnectedserver.domain.comment.CommentServiceTest" />
+      <option name="METHOD_NAME" value="getByBlogPostTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommentServiceTest.likeTest01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="code-connected-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.team200.codeconnectedserver.domain.comment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.team200.codeconnectedserver.domain.comment" />
+      <option name="MAIN_CLASS_NAME" value="com.team200.codeconnectedserver.domain.comment.CommentServiceTest" />
+      <option name="METHOD_NAME" value="likeTest01" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommentServiceTest.likeTest02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="code-connected-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.team200.codeconnectedserver.domain.comment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.team200.codeconnectedserver.domain.comment" />
+      <option name="MAIN_CLASS_NAME" value="com.team200.codeconnectedserver.domain.comment.CommentServiceTest" />
+      <option name="METHOD_NAME" value="likeTest02" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BlogPostControllerTest" />
-        <item itemvalue="JUnit.BlogPostServiceTest" />
-        <item itemvalue="JUnit.MessageServiceTest" />
+        <item itemvalue="Application.CodeConnectedServerApplication" />
+        <item itemvalue="JUnit.CommentServiceTest.getByBlogPostTest" />
         <item itemvalue="JUnit.CommentServiceTest.createTest" />
+        <item itemvalue="JUnit.CommentServiceTest.likeTest01" />
+        <item itemvalue="JUnit.CommentServiceTest.likeTest02" />
       </list>
     </recent_temporary>
   </component>

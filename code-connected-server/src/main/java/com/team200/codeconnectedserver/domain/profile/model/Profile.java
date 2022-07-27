@@ -13,6 +13,7 @@ import java.util.List;
 @ToString
 @NoArgsConstructor
 @RequiredArgsConstructor
+@Table(name = "profile")
 public class Profile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,15 +34,7 @@ public class Profile {
     private String email;
     @NonNull
     private String personalDescription;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "connections")
-    @NonNull
-    private List<Profile> connections;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "followers")
-    @NonNull
-    private List<Profile>followers;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "following")
-    @NonNull
-    private List<Profile>following;
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "profile")
     @NonNull
     List<BlogPost> posts;

@@ -67,7 +67,7 @@ public class BlogPostServiceTest {
         mockConnectionList = new ArrayList<>();
         mockEducationList = new ArrayList<>();
         mockBlogPostList = new ArrayList<>();
-        mockProfile = new Profile("firstName","lastName",mockEducationList,mockExperience,"email","password","description",mockConnectionList,mockFollowerList,mockFollowingList,mockBlogPostList);
+        mockProfile = new Profile();
         mockComment = new Comment();
         mockGroup = new Group();
         mockGroup.setGroupName("groupName");
