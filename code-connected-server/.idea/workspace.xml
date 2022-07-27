@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b470c40-8fcf-47d9-897c-02870efac482" name="Changes" comment="" />
+    <list default="true" id="6b470c40-8fcf-47d9-897c-02870efac482" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/team200/codeconnectedserver/domain/blogpost/BlogPostControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/team200/codeconnectedserver/domain/blogpost/JsonConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/profile/service/ProfileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/profile/service/ProfileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/profile/service/ProfileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team200/codeconnectedserver/domain/profile/service/ProfileServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/team200/codeconnectedserver/domain/blogpost/BlogPostServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/team200/codeconnectedserver/domain/blogpost/BlogPostServiceTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

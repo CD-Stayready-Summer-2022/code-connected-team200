@@ -1,5 +1,6 @@
 package com.team200.codeconnectedserver.domain.profile.service;
 
+import com.team200.codeconnectedserver.domain.exceptions.ResourceNotFoundException;
 import com.team200.codeconnectedserver.domain.profile.model.Profile;
 import com.team200.codeconnectedserver.domain.profile.repo.ProfileRepo;
 import com.team200.codeconnectedserver.exceptions.ProfileCreationException;
@@ -18,53 +19,53 @@ public class ProfileServiceImpl  implements ProfileService{
         this.profileRepo = profileRepo;
     }
     @Override
-    public Profile create(Profile profile) throws ProfileCreationException {
+    public Profile create(Profile profile) throws ResourceNotFoundException {
         Optional<Profile> optional = profileRepo.findByEmail(profile.getEmail());
         if(optional.isPresent())
-            throw new ProfileCreationException("profile already exists " );
+            throw new ResourceNotFoundException("profile already exists " );
         return profileRepo.save(profile);
     }
 
     @Override
-    public Profile getById(Long id) throws ProfileNotFoundException {
+    public Profile getById(Long id) throws ResourceNotFoundException {
         Profile profile = profileRepo.findById(id)
-                .orElseThrow(() -> new ProfileNotFoundException("profile with id does not exists " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("profile with id does not exists " + id));
         return profile;
     }
 
     @Override
-    public List<Profile> getAllFollowers(Long id) throws ProfileNotFoundException {
+    public List<Profile> getAllFollowers(Long id) throws ResourceNotFoundException {
         Profile profile = profileRepo.findById(id)
-                .orElseThrow(() -> new ProfileNotFoundException("profile with id does not exists " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("profile with id does not exists " + id));
         return profile.getFollowers();
     }
 
     @Override
-    public List<Profile> getAllFollowing(Long id) throws ProfileNotFoundException {
+    public List<Profile> getAllFollowing(Long id) throws ResourceNotFoundException{
         Profile profile = profileRepo.findById(id)
-                .orElseThrow(() -> new ProfileNotFoundException("profile with id does not exists " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("profile with id does not exists " + id));
         return profile.getFollowers();
     }
 
     @Override
-    public Optional<Profile> getByEmail(String email) throws ProfileNotFoundException {
+    public Optional<Profile> getByEmail(String email) throws ResourceNotFoundException {
         Optional<Profile> optional = profileRepo.findByEmail(email);
         if (optional.isEmpty()) {
-            throw new ProfileNotFoundException("profile with id does not exists " + email);
+            throw new ResourceNotFoundException("profile with id does not exists " + email);
         }
         return optional;
     }
 
     @Override
-    public List<Profile> getByLastName(String lastName) throws ProfileNotFoundException {
+    public List<Profile> getByLastName(String lastName) throws ResourceNotFoundException {
         List<Profile> profiles = (List) profileRepo.findByLastName(lastName);
         if(profiles.size() == 0)
-            throw new ProfileNotFoundException("No users with last name " + lastName);
+            throw new ResourceNotFoundException("No users with last name " + lastName);
         return profiles;
     }
 
     @Override
-    public Profile update(Long id, Profile profileDetail) throws ProfileNotFoundException {
+    public Profile update(Long id, Profile profileDetail) throws ResourceNotFoundException, ProfileNotFoundException {
         Profile savedProfile = getById(id);
         savedProfile.setFirstName(profileDetail.getFirstName());
         savedProfile.setLastName(profileDetail.getLastName());
@@ -79,7 +80,7 @@ public class ProfileServiceImpl  implements ProfileService{
     }
 
     @Override
-    public void delete(Long id) throws ProfileNotFoundException {
+    public void delete(Long id) throws ResourceNotFoundException {
         Profile profile = getById(id);
         profileRepo.delete(profile);
 
