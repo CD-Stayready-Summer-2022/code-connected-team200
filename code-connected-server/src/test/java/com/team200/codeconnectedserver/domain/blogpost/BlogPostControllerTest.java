@@ -10,6 +10,7 @@ import com.team200.codeconnectedserver.domain.group.model.Group;
 import com.team200.codeconnectedserver.domain.job.model.Job;
 import com.team200.codeconnectedserver.domain.profile.model.Profile;
 import com.team200.codeconnectedserver.domain.profile.service.ProfileService;
+import lombok.NonNull;
 import org.hamcrest.core.Is;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -59,12 +60,14 @@ public class BlogPostControllerTest {
     private List<BlogPost>mockBlogPostList;
     private List<Job>mockJoblist;
     private String profileDescription;
+    List<Profile> mockConnectionList;
 
 
 
     @BeforeEach
     public void setUp(){
-        mockProfile = new Profile("firstName","lastName",mockEducationList,mockJoblist,"email","password",mockBlogPostList);
+
+        mockProfile = new Profile("firstName","lastName",mockEducationList,mockJoblist,"email","password","description",mockConnectionList,mockFollowerList,mockFollowingList,mockBlogPostList);
         mockComment = new Comment();
         mockGroup = new Group();
         mockJob = new Job();
@@ -112,14 +115,6 @@ public class BlogPostControllerTest {
         BDDMockito.doThrow(new ResourceNotFoundException("not found")).when(blogPostService).getById(1l);
         mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/blogPost/{id}",1))
                 .andExpect(MockMvcResultMatchers.status().isNotFound());
-
-
-    }
-    @Test
-    @DisplayName("Get by Profile /api/v1/{profile} : success")
-    public void getByProfileSuccess()throws Exception{
-        BDDMockito.doReturn(BlogPost)
-
 
 
     }

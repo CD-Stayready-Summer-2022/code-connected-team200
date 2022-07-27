@@ -9,6 +9,7 @@ import com.team200.codeconnectedserver.domain.profile.model.Profile;
 import com.team200.codeconnectedserver.domain.profile.service.ProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Optional;
 
@@ -49,6 +50,8 @@ public class GroupServiceImpl implements GroupService{
         savedGroup.getMembers().add(profile);
         return groupRepo.save(savedGroup);
     }
+
+
 
     @Override
     public void delete(Long id)throws ResourceNotFoundException{

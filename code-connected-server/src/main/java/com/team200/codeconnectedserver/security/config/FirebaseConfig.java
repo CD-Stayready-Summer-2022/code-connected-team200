@@ -1,8 +1,5 @@
 package com.team200.codeconnectedserver.security.config;
 
-import com.google.auth.oauth2.GoogleCredentials;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.FirebaseOptions;
 import com.team200.codeconnectedserver.security.models.SecurityProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

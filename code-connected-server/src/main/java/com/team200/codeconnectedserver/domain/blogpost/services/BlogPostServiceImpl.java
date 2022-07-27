@@ -5,6 +5,7 @@ import com.team200.codeconnectedserver.domain.blogpost.repo.BlogPostRepo;
 import com.team200.codeconnectedserver.domain.exceptions.ResourceNotFoundException;
 
 import com.team200.codeconnectedserver.domain.group.model.Group;
+import com.team200.codeconnectedserver.domain.group.services.GroupService;
 import com.team200.codeconnectedserver.domain.profile.service.ProfileService;
 import com.team200.codeconnectedserver.exceptions.ProfileNotFoundException;
 import org.slf4j.Logger;
@@ -16,12 +17,14 @@ import java.util.Optional;
 
 public class BlogPostServiceImpl implements BlogPostService {
     private final BlogPostRepo blogPostRepo;
+    private GroupService groupService;
     private static Logger logger = LoggerFactory.getLogger(BlogPostServiceImpl.class);
     private ProfileService profileService;
     @Autowired
-    public BlogPostServiceImpl(BlogPostRepo blogPostRepo, ProfileService profileService) {
+    public BlogPostServiceImpl(BlogPostRepo blogPostRepo, ProfileService profileService,GroupService groupService) {
         this.blogPostRepo = blogPostRepo;
         this.profileService = profileService;
+        this.groupService= groupService;
     }
 
 
@@ -42,7 +45,7 @@ public class BlogPostServiceImpl implements BlogPostService {
     }
 
     @Override
-    public List<BlogPost> getByProfile(Long Profile_id) throws ResourceNotFoundException, ProfileNotFoundException {
+    public List<BlogPost> getByProfile(Long Profile_id) throws ResourceNotFoundException {
         List<BlogPost>blogPosts = (List)blogPostRepo.findByProfile(profileService.getById(Profile_id));
         if(blogPosts.size()==0){
             logger.error("blogposts with that id are not found ");
@@ -52,14 +55,17 @@ public class BlogPostServiceImpl implements BlogPostService {
     }
 
     @Override
-    public List<BlogPost> getByGroupName(String groupName) throws ResourceNotFoundException {
-        List<BlogPost>blogPosts = (List<BlogPost>) blogPostRepo.findByGroupName(groupName);
+    public List<BlogPost> getByGroup(Long id) throws ResourceNotFoundException {
+        Group group = groupService.getById(id);
+        List<BlogPost>blogPosts=(List)blogPostRepo.findByGroup(group);
         if(blogPosts.size()==0){
-            throw new ResourceNotFoundException("no blog posts are associated with that group name");
+            logger.error("blogpost from group are not found ");
+            throw new ResourceNotFoundException("blog posts from that that group are not found");
+
         }
         return blogPosts;
-    }
 
+    }
 
 
     @Override

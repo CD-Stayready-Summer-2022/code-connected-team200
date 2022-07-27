@@ -14,6 +14,7 @@ public interface GroupService {
     List<Profile> getMembers() ;
     List<Profile>getAdmins();
     Group addMember(Long id, Profile profile);
+
     void delete(Long id)throws ResourceNotFoundException;
 
 }

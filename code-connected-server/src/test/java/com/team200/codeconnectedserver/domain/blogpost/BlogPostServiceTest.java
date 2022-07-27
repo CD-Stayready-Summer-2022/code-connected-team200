@@ -69,12 +69,15 @@ public class BlogPostServiceTest {
         mockProfile = new Profile("firstName","lastName",mockEducationList,mockExperience,"email","password","description",mockConnectionList,mockFollowerList,mockFollowingList,mockBlogPostList);
         mockComment = new Comment();
         mockGroup = new Group();
+        mockGroup.setGroupName("groupName");
         mockJob = new Job();
         mockEducation = new Education();
         mockCommentList.add(mockComment);
         mockBlogPost = new BlogPost("test",mockCommentList,mockProfile);
         mockSavedBlogPost = new BlogPost("test",mockCommentList,mockProfile);
         mockSavedBlogPost.setId(1L);
+        mockProfile.setId(1l);
+        mockBlogPost.setGroup(mockGroup);
     }
     @Test
     @DisplayName("BlogPost service: create BlogPost - success")
@@ -101,7 +104,6 @@ public class BlogPostServiceTest {
         Assertions.assertThrows(ResourceNotFoundException.class, ()->{
             blogPostService.getById(1L);
         });
-
     }
     @Test
     @DisplayName("BlogPost Service: Get by profile")
@@ -115,7 +117,6 @@ public class BlogPostServiceTest {
         Integer actual = blogPostList.size();
         Assertions.assertEquals(expected,actual);
 
-
     }
     @Test
     @DisplayName("BlogPost Service: Get by profile ")
@@ -125,6 +126,15 @@ public class BlogPostServiceTest {
         Assertions.assertThrows(ResourceNotFoundException.class, ()->{
             List<BlogPost>blogPostList = blogPostService.getByProfile(1l);
         });
+
+    }
+    @Test
+    @DisplayName("BlogPost Service: Get by GroupName")
+    public void getBlogPostByGroupName()throws ResourceNotFoundException{
+        List<BlogPost>blogPosts = new ArrayList<>();
+
+
+
 
     }
 

@@ -14,4 +14,5 @@ public interface GroupRepo extends JpaRepository<Group,Long> {
     List<Profile>findAllMembers();
     Optional<Group>findById();
 
+
 }

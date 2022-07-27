@@ -44,7 +44,7 @@ public class BlogPostController {
         return new ResponseEntity<>(blogPosts,HttpStatus.OK);
     }
     @PutMapping("{id}")
-    public ResponseEntity<HttpStatus>likePost(@PathVariable("id")Long id, @RequestBody BlogPost blogPostDetail){
+    public ResponseEntity<BlogPost>likePost(@PathVariable("id")Long id, @RequestBody BlogPost blogPostDetail){
         BlogPost blogPost = blogPostService.likePost(id, blogPostDetail);
         return new ResponseEntity<>(blogPost,HttpStatus.ACCEPTED);
 

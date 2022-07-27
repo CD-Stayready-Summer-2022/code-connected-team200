@@ -12,8 +12,8 @@ import java.util.Optional;
 public interface BlogPostService {
      BlogPost create (BlogPost blogPost);
      BlogPost getById(Long id);
-     List<BlogPost> getByProfile(Long id) throws ProfileNotFoundException;
-     List<BlogPost> getByGroupName(String groupName);
+     List<BlogPost> getByProfile(Long id) throws ResourceNotFoundException;
+    List<BlogPost>getByGroup(Long id)throws ResourceNotFoundException;
      BlogPost likePost(Long id, BlogPost blogPostDetail)throws ResourceNotFoundException;
 
 
