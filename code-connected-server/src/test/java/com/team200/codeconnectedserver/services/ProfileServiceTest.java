@@ -49,11 +49,11 @@ public class ProfileServiceTest {
         mockfollowing = new ArrayList<>();
         mockposts = new ArrayList<>();
 
-        Profile mockProfile01 = new Profile("firstName", "lastName", mockEducationList, mockExperience, "email", "password", "description", mockConnectionList, mockfollowers, mockfollowing, mockposts);
-        Profile savedProfile01 = new Profile("firstName", "lastName", mockEducationList, mockExperience, "email", "password", "description", mockConnectionList, mockfollowers, mockfollowing, mockposts);
+        Profile mockProfile01 = new Profile("firstName", "lastName", mockEducationList, mockExperience, "email", "password", "description", mockposts);
+        Profile savedProfile01 = new Profile("firstName", "lastName", mockEducationList, mockExperience, "email", "password", "description", mockposts);
         savedProfile01.setId(1L);
 
-        Profile savedProfile02 = new Profile("firstName2", "lastName", mockEducationList, mockExperience, "email2", "password2", "description2", mockConnectionList, mockfollowers, mockfollowing, mockposts);
+        Profile savedProfile02 = new Profile("firstName2", "lastName", mockEducationList, mockExperience, "email2", "password2", "description2", mockposts);
     }
 
     @Test
