@@ -2,6 +2,9 @@ package com.team200.codeconnectedserver.domain.comment.models;
 
 import com.team200.codeconnectedserver.domain.blogpost.model.BlogPost;
 import com.team200.codeconnectedserver.domain.profile.model.Profile;
+
+
+
 import lombok.*;
 
 import javax.persistence.*;
@@ -18,10 +21,15 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @ManyToOne
+    @JoinColumn(name = "sender_id")
     @NonNull
     private Profile sender;
     @NonNull
     private String body;
+
+    @NonNull
+    private Integer likes;
 
     @NonNull
     @ManyToOne()
