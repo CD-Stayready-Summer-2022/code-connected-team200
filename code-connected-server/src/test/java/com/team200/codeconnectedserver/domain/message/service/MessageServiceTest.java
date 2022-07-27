@@ -2,10 +2,9 @@ package com.team200.codeconnectedserver.domain.message.service;
 
 import com.team200.codeconnectedserver.domain.chat.exceptions.ChatNotFoundException;
 import com.team200.codeconnectedserver.domain.chat.model.Chat;
-import com.team200.codeconnectedserver.domain.core.exceptions.ResourceNotFoundException;
+import com.team200.codeconnectedserver.domain.exceptions.ResourceNotFoundException;
 import com.team200.codeconnectedserver.domain.message.model.Message;
 import com.team200.codeconnectedserver.domain.message.repo.MessageRepo;
-import com.team200.codeconnectedserver.domain.message.service.MessageService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -16,6 +15,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import javax.persistence.Temporal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

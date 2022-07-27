@@ -1,6 +1,5 @@
 package com.team200.codeconnectedserver.domain.message.model;
 
-import com.sun.istack.NotNull;
 import com.team200.codeconnectedserver.domain.chat.model.Chat;
 import lombok.*;
 
@@ -24,14 +23,10 @@ public class Message {
     @NonNull
     private String content;
     @ManyToOne
-    private Chat chat;
-
+    Chat chat;
     @PrePersist
     protected void onCreate() {
         date = new Date();
-    }
-
-    public void setChat(Chat chat) {
     }
 }
 

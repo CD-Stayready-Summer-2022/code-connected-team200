@@ -3,7 +3,7 @@ package com.team200.codeconnectedserver.domain.message.service;
 import com.team200.codeconnectedserver.domain.chat.exceptions.ChatNotFoundException;
 import com.team200.codeconnectedserver.domain.chat.model.Chat;
 import com.team200.codeconnectedserver.domain.chat.services.ChatService;
-import com.team200.codeconnectedserver.domain.core.exceptions.ResourceNotFoundException;
+import com.team200.codeconnectedserver.domain.exceptions.ResourceNotFoundException;
 import com.team200.codeconnectedserver.domain.message.model.Message;
 import com.team200.codeconnectedserver.domain.message.repo.MessageRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,6 @@ import java.util.Optional;
 
 @Service
 public class MessageServiceImpl implements MessageService{
-
     private MessageRepo messageRepo;
     private ChatService chatService;
 
@@ -61,5 +60,6 @@ public class MessageServiceImpl implements MessageService{
         Message message  = getById(id);
         messageRepo.delete(message);
         return true;
+
     }
 }
