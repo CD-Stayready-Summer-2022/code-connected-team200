@@ -3,6 +3,7 @@ package com.team200.codeconnectedserver.services;
 import com.team200.codeconnectedserver.domain.blogpost.model.BlogPost;
 import com.team200.codeconnectedserver.domain.core.Exceptions.ResourceCreationException;
 import com.team200.codeconnectedserver.domain.education.model.Education;
+import com.team200.codeconnectedserver.domain.exceptions.ResourceCreationException;
 import com.team200.codeconnectedserver.domain.job.model.Job;
 import com.team200.codeconnectedserver.domain.profile.model.Profile;
 import com.team200.codeconnectedserver.domain.profile.repo.ProfileRepo;
@@ -33,7 +34,6 @@ public class ProfileServiceTest {
 
     @MockBean
     private ProfileRepo profileRepo;
-
     private Profile mockProfile01;
     private Profile savedProfile01;
     private Profile savedProfile02;
@@ -59,7 +59,7 @@ public class ProfileServiceTest {
         }
         @Test
         @DisplayName("Create Person - Success")
-        public void createProfileTest01() throws ProfileCreationException {
+        public void createProfileTest01() throws ResourceCreationException {
             BDDMockito.doReturn(Optional.empty()).when(profileRepo).findById(ArgumentMatchers.any());
             BDDMockito.doReturn(savedProfile01).when(profileRepo).save(mockProfile01);
             Profile profile = profileService.create(mockProfile01);
