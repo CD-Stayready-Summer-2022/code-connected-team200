@@ -4,7 +4,6 @@ import com.team200.codeconnectedserver.domain.blogpost.model.BlogPost;
 import com.team200.codeconnectedserver.domain.education.model.Education;
 import com.team200.codeconnectedserver.domain.job.model.Job;
 import lombok.*;
-import org.springframework.boot.context.config.Profiles;
 
 import javax.persistence.*;
 import java.util.List;
@@ -34,13 +33,13 @@ public class Profile {
     private String password;
     @NonNull
     private String personalDescription;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "profile")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "connections")
     @NonNull
     private List<Profile> connections;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "profile")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "followers")
     @NonNull
     private List<Profile>followers;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "profile")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "following")
     @NonNull
     private List<Profile>following;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "profile")

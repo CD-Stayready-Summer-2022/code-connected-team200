@@ -1,14 +1,12 @@
 package com.team200.codeconnectedserver.domain.job.model;
 
+import com.team200.codeconnectedserver.domain.profile.model.Profile;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 
 @Entity
@@ -32,6 +30,8 @@ public class Job {
 
     @NonNull
     private String jobDescription;
+    @ManyToOne
+    private Profile profile;
 
     public String toString(){
         return String.format("%d %s %s %s %s", id, jobTitle, companyName,dateRange,jobDescription);

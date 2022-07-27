@@ -6,7 +6,6 @@ spring:
     password: clean-code
   jpa:
     show-sql: false
-
 security:
   firebase-props:
     database-url: ${FIREBASE_DATABASE}

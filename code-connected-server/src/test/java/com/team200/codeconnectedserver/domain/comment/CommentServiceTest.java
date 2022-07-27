@@ -10,7 +10,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.ArgumentMatchers;
 import org.mockito.BDDMockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -28,24 +27,32 @@ public class CommentServiceTest {
     private CommentRepo commentRepo;
 
     private Comment inputComment;
-    private Comment testComment;
+
+    private Comment testComment1;
+    private Comment testComment2;
 
     @BeforeEach
     public void setUp() {
-        inputComment = new Comment(new Profile(),"Test Comment",new BlogPost());
-
-        testComment = inputComment;
-
-
+        inputComment = new Comment(new Profile(),"mock Comment",new BlogPost());
+        testComment1 = new Comment(new Profile(),"test comment 01",new BlogPost());
+        inputComment.setId(1l);
+        testComment2 = new Comment(new Profile(),"Test comment 2",new BlogPost());
+        testComment1.setId(1l);
+        testComment2.setId(1l);
     }
 
     @Test
-    @DisplayName("Create Test success")
+    @DisplayName("Create Test- Success")
     public void createTest() {
-        BDDMockito.doReturn(inputComment).when(commentRepo).save(ArgumentMatchers.any());
-        Comment createdComment = commentService.create(testComment);
-        Assertions.assertEquals(createdComment,inputComment);
+        BDDMockito.doReturn(inputComment).when(commentRepo).save(inputComment);
+        Comment actualComment = commentService.create(testComment1);
+        Assertions.assertEquals(actualComment,testComment1);
     }
 
+    @Test
+    @DisplayName("Create Test - Fail")
+    public void createTest02() {
+       // BDDMockito.doReturn()
+    }
 
 }

@@ -1,13 +1,14 @@
 package com.team200.codeconnectedserver.domain.blogpost.repo;
 
 import com.team200.codeconnectedserver.domain.blogpost.model.BlogPost;
+import com.team200.codeconnectedserver.domain.group.model.Group;
 import com.team200.codeconnectedserver.domain.profile.model.Profile;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.Optional;
-
 public interface BlogPostRepo extends JpaRepository<BlogPost,Long> {
-    Iterable<BlogPost>findByGroupName(String groupName);
+
+
     Iterable<BlogPost>findByProfile(Profile profile);
+    Iterable<BlogPost> findByGroup(Group group);
 
 }

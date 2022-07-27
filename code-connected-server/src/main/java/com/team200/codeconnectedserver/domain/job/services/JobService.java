@@ -1,9 +1,9 @@
 package com.team200.codeconnectedserver.domain.job.services;
 
-import com.team200.codeconnectedserver.domain.exceptions.ResourceCreationException;
-import com.team200.codeconnectedserver.domain.exceptions.ResourceNotFoundException;
+
+import com.team200.codeconnectedserver.domain.core.exceptions.ResourceCreationException;
+import com.team200.codeconnectedserver.domain.core.exceptions.ResourceNotFoundException;
 import com.team200.codeconnectedserver.domain.job.model.Job;
-import org.hibernate.engine.transaction.jta.platform.internal.JOnASJtaPlatform;
 
 import java.util.List;
 
