@@ -1,7 +1,7 @@
 package com.team200.codeconnectedserver.domain.group.services;
 
 import com.team200.codeconnectedserver.domain.blogpost.services.BlogPostService;
-import com.team200.codeconnectedserver.domain.core.Exceptions.ResourceCreationException;
+import com.team200.codeconnectedserver.domain.core.exceptions.ResourceCreationException;
 import com.team200.codeconnectedserver.domain.exceptions.ResourceNotFoundException;
 import com.team200.codeconnectedserver.domain.group.model.Group;
 import com.team200.codeconnectedserver.domain.group.repo.GroupRepo;

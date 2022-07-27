@@ -1,7 +1,7 @@
 package com.team200.codeconnectedserver.domain.message.contoller;
 
-import com.team200.codeconnectedserver.domain.chat.exceptions.ChatNotFoundException;
 import com.team200.codeconnectedserver.domain.message.model.Message;
+import com.team200.codeconnectedserver.domain.chat.exceptions.ChatNotFoundException;
 import com.team200.codeconnectedserver.domain.message.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

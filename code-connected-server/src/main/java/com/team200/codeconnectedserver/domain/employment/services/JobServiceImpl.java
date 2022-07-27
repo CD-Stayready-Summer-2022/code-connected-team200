@@ -1,9 +1,9 @@
-package com.team200.codeconnectedserver.domain.job.services;
+package com.team200.codeconnectedserver.domain.employment.services;
 
-import com.team200.codeconnectedserver.domain.exceptions.ResourceCreationException;
-import com.team200.codeconnectedserver.domain.exceptions.ResourceNotFoundException;
-import com.team200.codeconnectedserver.domain.job.model.Job;
-import com.team200.codeconnectedserver.domain.job.repo.JobRepository;
+import com.team200.codeconnectedserver.domain.core.exceptions.ResourceCreationException;
+import com.team200.codeconnectedserver.domain.core.exceptions.ResourceNotFoundException;
+import com.team200.codeconnectedserver.domain.employment.model.Job;
+import com.team200.codeconnectedserver.domain.employment.repo.JobRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

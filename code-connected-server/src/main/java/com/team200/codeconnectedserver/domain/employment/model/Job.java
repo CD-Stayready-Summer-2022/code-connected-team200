@@ -1,4 +1,4 @@
-package com.team200.codeconnectedserver.domain.job.model;
+package com.team200.codeconnectedserver.domain.employment.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,12 +1,14 @@
-package com.team200.codeconnectedserver.domain.job.controller;
+package com.team200.codeconnectedserver.domain.employment.controller;
 
-import antlr.collections.List;
-import com.team200.codeconnectedserver.domain.job.model.Job;
-import com.team200.codeconnectedserver.domain.job.services.JobService;
+import com.team200.codeconnectedserver.domain.employment.model.Job;
+import com.team200.codeconnectedserver.domain.employment.services.JobService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.batch.BatchProperties;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 @RestController
@@ -19,14 +21,11 @@ public class JobController {
     public JobController(JobService jobService){
         this.jobService = jobService;
     }
-    /*
     @GetMapping
     public ResponseEntity<List<Job>> getAll(){
         List<Job> job = jobService.getAll();
         return new ResponseEntity<>(job, HttpStatus.OK);
     }
-
-     */
 
     @PostMapping
     public ResponseEntity<Job> create(@RequestBody Job job){

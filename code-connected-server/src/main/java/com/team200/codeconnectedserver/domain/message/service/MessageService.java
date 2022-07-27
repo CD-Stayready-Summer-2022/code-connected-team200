@@ -2,7 +2,7 @@ package com.team200.codeconnectedserver.domain.message.service;
 
 import com.team200.codeconnectedserver.domain.chat.exceptions.ChatNotFoundException;
 import com.team200.codeconnectedserver.domain.chat.model.Chat;
-import com.team200.codeconnectedserver.domain.core.Exceptions.ResourceNotFoundException;
+import com.team200.codeconnectedserver.domain.core.exceptions.ResourceNotFoundException;
 import com.team200.codeconnectedserver.domain.message.model.Message;
 
 public interface MessageService {

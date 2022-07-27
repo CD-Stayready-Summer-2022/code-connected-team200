@@ -2,7 +2,7 @@ package com.team200.codeconnectedserver.domain.profile.model;
 
 import com.team200.codeconnectedserver.domain.blogpost.model.BlogPost;
 import com.team200.codeconnectedserver.domain.education.model.Education;
-import com.team200.codeconnectedserver.domain.job.model.Job;
+import com.team200.codeconnectedserver.domain.employment.model.Job;
 import lombok.*;
 import org.springframework.boot.context.config.Profiles;
 
