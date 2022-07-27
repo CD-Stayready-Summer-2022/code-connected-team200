@@ -1,7 +1,9 @@
 package com.team200.codeconnectedserver.domain.profile.service;
 
+
 import com.team200.codeconnectedserver.domain.core.exceptions.ResourceCreationException;
 import com.team200.codeconnectedserver.domain.core.exceptions.ResourceNotFoundException;
+
 import com.team200.codeconnectedserver.domain.profile.model.Profile;
 
 
@@ -16,6 +18,8 @@ public interface ProfileService {
     List<Profile> getAllFollowing(Long id) throws ResourceNotFoundException;
     Optional<Profile> getByEmail(String email) throws ResourceNotFoundException;
     List<Profile> getByLastName(String LastName) throws ResourceNotFoundException;
+
     Profile update(Long id, Profile ProfileDetail) throws ResourceNotFoundException;
+
     void delete(Long id) throws ResourceNotFoundException;
 }

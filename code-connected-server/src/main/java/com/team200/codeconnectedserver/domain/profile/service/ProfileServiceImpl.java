@@ -7,10 +7,11 @@ import com.team200.codeconnectedserver.domain.profile.repo.ProfileRepo;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class ProfileServiceImpl  implements ProfileService{
 
     private ProfileRepo profileRepo;

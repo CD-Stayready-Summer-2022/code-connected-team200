@@ -8,10 +8,8 @@ import java.util.Optional;
 
 public interface GroupRepo extends JpaRepository<Group,Long> {
 
-    List<Profile> findByProfile();
-    List<Profile>findAllAdmins();
-    Optional<Group> findByOwner(Profile profile);
-    List<Profile>findAllMembers();
-    Optional<Group>findById();
+     List<Group>findByOwner(Profile profile);
+    Optional<Group>findById(Long id);
+
 
 }

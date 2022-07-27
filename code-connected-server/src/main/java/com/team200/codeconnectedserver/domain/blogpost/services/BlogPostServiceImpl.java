@@ -6,7 +6,7 @@ import com.team200.codeconnectedserver.domain.exceptions.ResourceNotFoundExcepti
 
 import com.team200.codeconnectedserver.domain.group.model.Group;
 import com.team200.codeconnectedserver.domain.profile.service.ProfileService;
-import com.team200.codeconnectedserver.exceptions.ProfileNotFoundException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,7 +43,7 @@ public class BlogPostServiceImpl implements BlogPostService {
     }
 
     @Override
-    public List<BlogPost> getByProfile(Long Profile_id) throws ResourceNotFoundException, ProfileNotFoundException {
+    public List<BlogPost> getByProfile(Long Profile_id) throws ResourceNotFoundException{
         List<BlogPost>blogPosts = (List)blogPostRepo.findByProfile(profileService.getById(Profile_id));
         if(blogPosts.size()==0){
             logger.error("blogposts with that id are not found ");
@@ -68,7 +68,7 @@ public class BlogPostServiceImpl implements BlogPostService {
         BlogPost savedBlogPost = getById(id);
         int currentNumberOfLikes =blogPostDetail.getLikes();
         savedBlogPost.setLikes(currentNumberOfLikes+1);
-       return  blogPostRepo.save(savedBlogPost);
+        return  blogPostRepo.save(savedBlogPost);
 
 
     }
